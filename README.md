@@ -1,5 +1,6 @@
-# 📊 [Nombre_Del_Proyecto]
-# [Título del Análisis]
+# 📊 Anime Analytics: Tendencias, Calidad y Evolución de la Industria del Anime en las Últimas Dos Décadas
+
+## Un análisis profundo basado en datos de MyAnimeList utilizando pipelines automatizados y visualización avanzada.
 
 Este proyecto realiza un análisis [exploratorio / predictivo / descriptivo] de [tema del proyecto]. El conjunto de datos incluye información sobre [breve descripción del contenido del dataset].
 
