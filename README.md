@@ -2,7 +2,10 @@
 
 ## Un análisis profundo basado en datos de MyAnimeList utilizando pipelines automatizados y visualización avanzada.
 
-Este proyecto realiza un análisis [exploratorio / predictivo / descriptivo] de [tema del proyecto]. El conjunto de datos incluye información sobre [breve descripción del contenido del dataset].
+Este proyecto desarrolla un sistema completo de análisis de datos centrado en la industria del anime, utilizando información pública obtenida a través de Jikan API (wrapper de MyAnimeList).
+El objetivo es identificar patrones de calidad, popularidad y producción a lo largo del tiempo, evaluar el desempeño de estudios y géneros, y comprender la evolución general del anime en las últimas dos décadas.
+
+El proyecto incluye un pipeline automatizado de extracción y limpieza de datos, análisis exploratorio avanzado, modelado estadístico ligero, y un dashboard interactivo que presenta hallazgos clave para stakeholders de la industria del entretenimiento, distribuidores, plataformas de streaming y estudios.
 
 ---
 
