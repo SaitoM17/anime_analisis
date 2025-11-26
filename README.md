@@ -14,7 +14,7 @@ El proyecto incluye un pipeline automatizado de extracción y limpieza de datos,
 - [🎯 Propósito](#-propósito)
 - [📦 Conjunto de Datos](#-conjunto-de-datos)
 - [🧪 Desarrollo del Proyecto](#-desarrollo-del-proyecto)
-- [📈 Conclusiones y Recomendaciones](#-conclusiones-y-recomendaciones)
+- [💡 Insights claves](#-insights-claves)
 - [🛠️ Tecnologías](#️-tecnologías)
 - [⚙️ Instalación](#️-instalación)
 - [👤 Autor](#-autor)
@@ -62,7 +62,7 @@ Fuente: [Nombre de la fuente o “datos simulados/ficticios”].
 
 ---
 
-## 📈 Conclusiones y Recomendaciones
+## 💡 Insights claves
 
 - [Insight 1]
 - [Insight 2]
