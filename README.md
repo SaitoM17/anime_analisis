@@ -22,8 +22,11 @@ El proyecto incluye un pipeline automatizado de extracción y limpieza de datos,
 ---
 
 ## 🎯 Propósito
-
-El objetivo de este proyecto es [objetivo general del análisis], con el fin de [impacto esperado, decisiones que se tomarán, etc.].
+* Evaluar tendencias en calidad y popularidad del anime a lo largo del tiempo.
+* Determinar qué factores influyen más en el éxito de un anime (estudio, temporada, género, episodios, duración).
+* Comparar el desempeño entre estudios de animación.
+* Identificar patrones estacionales y picos de producción.
+* Facilitar decisiones basadas en datos para plataformas que licenciaron anime, estudios de doblaje o marketing.
 
 ---
 
