@@ -1,5 +1,10 @@
 import requests
 
+anime_dic = {
+    'mal_id': [],
+    'title': []
+}
+
 url = 'https://api.jikan.moe/v4/anime'
 
 try:
@@ -9,16 +14,18 @@ try:
         print('Petición exitosa')
         data = response.json()
         lista_data = data.get('data',[])
-        # print(lista_data)
+        
         for anime in lista_data:
             mal_id = anime.get('mal_id')
             title_ingles = anime.get('title_english')
-            print(f"Título: {mal_id}")
-            print(f"Año: {title_ingles}")
-            print("---") # Separador para claridad
+            
+            anime_dic['mal_id'].append(mal_id)
+            anime_dic['title'].append(title_ingles)
     else:
         print(f'Error en la petición \nEstado: {response.status_code}')
         print(response.text)
 
 except requests.exceptions.RequestException as e:
     print(f'Error de conexión: {e}')
+
+print(anime_dic)
