@@ -1,6 +1,6 @@
 import requests
 
-url = 'https://api.jikan.moe/v4/anime'
+url = 'https://api.jikan.moe/v4/producers'
 
 try:
     response = requests.get(url)
