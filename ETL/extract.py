@@ -122,4 +122,42 @@ def extraccion_studios():
 
     return studios_dic
 
-print(extraccion_studios())
+def extraccion_popularidad():
+    popularidad_dic = {
+        'mal_id': [],
+        'score': [],
+        'scored_by': [],
+        'miembros': [],
+        'favoritos': [],
+        'popularidad': []
+    }
+
+    for pagina in range(1,3):
+        url = f'https://api.jikan.moe/v4/anime?page={pagina}'
+
+        try:
+            response = requests.get(url)
+            
+            if response.status_code == 200:
+                print('Petición exitosa')
+                data = response.json()
+                lista_data = data.get('data',[])
+                
+                for anime in lista_data:
+                    popularidad_dic['mal_id'].append(anime.get('mal_id'))
+                    popularidad_dic['score'].append(anime.get('score'))
+                    popularidad_dic['scored_by'].append(anime.get('scored_by'))
+                    popularidad_dic['miembros'].append(anime.get('members'))
+                    popularidad_dic['favoritos'].append(anime.get('favorites'))
+                    popularidad_dic['popularidad'].append(anime.get('popularity'))
+        
+            else:
+                print(f'Error en la petición \nEstado: {response.status_code}')
+                print(response.text)
+
+        except requests.exceptions.RequestException as e:
+            print(f'Error de conexión: {e}')
+
+    return popularidad_dic
+
+print(extraccion_popularidad())
