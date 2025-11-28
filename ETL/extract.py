@@ -1,5 +1,4 @@
 import requests
-import pandas as pd
 
 def extraccion_anime():
     anime_dic = {
@@ -35,6 +34,7 @@ def extraccion_anime():
                     anime_dic['titulo_japones'].append(anime.get('title_japanese'))
                     anime_dic['tipo'].append(anime.get('type'))
                     anime_dic['episodios'].append(anime.get('episodes'))
+                    anime_dic['annio'].append(anime.get('year'))
                     anime_dic['temporada'].append(anime.get('season'))
                     anime_dic['clasifificacion'].append(anime.get('rating'))
                     anime_dic['duracion'].append(anime.get('duration'))
