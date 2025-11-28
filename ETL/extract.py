@@ -78,4 +78,48 @@ def extraccion_genero():
 
     return genero_dic
 
-print(extraccion_genero())
+def extraccion_studios():
+    studios_dic = {
+        'mal_id': [],
+        'nombre_studio': [],
+        'favoritos': [],
+        'establecido': []
+    }
+
+    url = f'https://api.jikan.moe/v4/producers'
+
+    try:
+        response = requests.get(url)
+            
+        if response.status_code == 200:
+            print('Petición exitosa')
+            data = response.json()
+            lista_data = data.get('data',[])
+                
+            for anime in lista_data:
+                studios_dic['mal_id'].append(anime.get('mal_id'))
+                lista_titulos = anime.get('titles')
+                studios_dic['favoritos'].append(anime.get('favorites'))
+                studios_dic['establecido'].append(anime.get('established'))
+
+                nombre_principal = None
+                lista_titulos = anime.get('titles')
+                
+                # Verificamos si la lista de títulos existe y no está vacía
+                if lista_titulos and len(lista_titulos) > 0:
+                    # Elegimos SOLO el primer título de la lista
+                    nombre_principal = lista_titulos[0].get('title')
+                
+                # Añadimos el título (o None si no se encontró) UNA SOLA VEZ
+                studios_dic['nombre_studio'].append(nombre_principal)
+        
+        else:
+            print(f'Error en la petición \nEstado: {response.status_code}')
+            print(response.text)
+
+    except requests.exceptions.RequestException as e:
+        print(f'Error de conexión: {e}')
+
+    return studios_dic
+
+print(extraccion_studios())
