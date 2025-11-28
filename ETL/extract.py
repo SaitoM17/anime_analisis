@@ -31,7 +31,7 @@ def extraccion_anime():
                     anime_dic['mal_id'].append(anime.get('mal_id'))
                     anime_dic['titulo'].append(anime.get('title'))
                     anime_dic['titulo_ingles'].append(anime.get('title_english'))
-                    anime_dic['titulo_ingles'].append(anime.get('title_japanese'))
+                    anime_dic['titulo_japones'].append(anime.get('title_japanese'))
                     anime_dic['tipo'].append(anime.get('type'))
                     anime_dic['episodios'].append(anime.get('episodes'))
                     anime_dic['temporada'].append(anime.get('season'))
@@ -49,4 +49,33 @@ def extraccion_anime():
 
     return anime_dic
 
-print(extraccion_anime())
+def extraccion_genero():
+    genero_dic = {
+        'genre_id': [],
+        'nombre_genero': [],
+    }
+
+    url = f'https://api.jikan.moe/v4/genres/anime'
+
+    try:
+        response = requests.get(url)
+            
+        if response.status_code == 200:
+            print('Petición exitosa')
+            data = response.json()
+            lista_data = data.get('data',[])
+                
+            for genero in lista_data:
+                genero_dic['genre_id'].append(genero.get('mal_id'))
+                genero_dic['nombre_genero'].append(genero.get('name'))
+        
+        else:
+            print(f'Error en la petición \nEstado: {response.status_code}')
+            print(response.text)
+
+    except requests.exceptions.RequestException as e:
+            print(f'Error de conexión: {e}')
+
+    return genero_dic
+
+print(extraccion_genero())
