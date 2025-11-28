@@ -235,5 +235,3 @@ def extraccion_anime_studio():
             print(f'Error de conexión: {e}')
 
     return anime_studio_dic
-
-print(extraccion_studios())
