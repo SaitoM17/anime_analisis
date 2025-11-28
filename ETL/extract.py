@@ -1,4 +1,5 @@
 import requests
+import pandas as pd
 
 def extraccion_anime():
     anime_dic = {
@@ -160,4 +161,48 @@ def extraccion_popularidad():
 
     return popularidad_dic
 
-print(extraccion_popularidad())
+def extraccion_anime_genero():
+    anime_genero_dic = {
+        'mal_id': [],
+        'genero_id': [],
+    }
+
+    for pagina in range(1,3):
+        url = f'https://api.jikan.moe/v4/anime?page={pagina}'
+
+        try:
+            response = requests.get(url)
+            
+            if response.status_code == 200:
+                print('Petición exitosa')
+                data = response.json()
+                lista_data = data.get('data',[])
+                
+                for anime in lista_data:
+                    anime_mal_id = anime.get('mal_id')
+                    lista_genero = anime.get('genres')
+
+                    if lista_genero:
+                        for genero in lista_genero:
+                            genero_id = genero.get('mal_id')
+                            
+                            # Agrega el par (Anime ID, Género ID) por cada iteración
+                            anime_genero_dic['mal_id'].append(anime_mal_id)
+                            anime_genero_dic['genero_id'].append(genero_id)
+        
+            else:
+                print(f'Error en la petición \nEstado: {response.status_code}')
+                print(response.text)
+
+        except requests.exceptions.RequestException as e:
+            print(f'Error de conexión: {e}')
+
+    return anime_genero_dic
+
+tabla_n_m = extraccion_anime_genero()
+df_link_genres = pd.DataFrame(tabla_n_m)
+print(extraccion_anime_genero())
+
+print('\n--- Resultado con Lógica N:M ---')
+print(f'Longitud de mal_id (total de filas): {len(df_link_genres["mal_id"])}')
+print(f'Número de animes únicos: {df_link_genres["mal_id"].nunique()}')
