@@ -99,7 +99,6 @@ def extraccion_studios():
                 
             for anime in lista_data:
                 studios_dic['mal_id'].append(anime.get('mal_id'))
-                lista_titulos = anime.get('titles')
                 studios_dic['favoritos'].append(anime.get('favorites'))
                 studios_dic['establecido'].append(anime.get('established'))
 
@@ -237,4 +236,4 @@ def extraccion_anime_studio():
 
     return anime_studio_dic
 
-print(extraccion_anime_studio())
+print(extraccion_studios())
