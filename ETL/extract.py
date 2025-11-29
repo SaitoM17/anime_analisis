@@ -1,6 +1,6 @@
 import requests
 
-def extraccion_anime():
+def extraccion_anime(num_paginas):
     anime_dic = {
         'mal_id': [],
         'titulo': [],
@@ -16,7 +16,7 @@ def extraccion_anime():
         'anime_rank': []
     }
 
-    for pagina in range(1,3):
+    for pagina in range(1,num_paginas):
         url = f'https://api.jikan.moe/v4/anime?page={pagina}'
 
         try:
@@ -79,50 +79,50 @@ def extraccion_genero():
 
     return genero_dic
 
-def extraccion_studios():
+def extraccion_studios(num_paginas):
     studios_dic = {
         'mal_id': [],
         'nombre_studio': [],
         'favoritos': [],
         'establecido': []
     }
+    for pagina in range(1,num_paginas):
+        url = f'https://api.jikan.moe/v4/producers?page={pagina}'
 
-    url = f'https://api.jikan.moe/v4/producers'
+        try:
+            response = requests.get(url)
+                
+            if response.status_code == 200:
+                print('Petición exitosa')
+                data = response.json()
+                lista_data = data.get('data',[])
+                    
+                for anime in lista_data:
+                    studios_dic['mal_id'].append(anime.get('mal_id'))
+                    studios_dic['favoritos'].append(anime.get('favorites'))
+                    studios_dic['establecido'].append(anime.get('established'))
 
-    try:
-        response = requests.get(url)
+                    nombre_principal = None
+                    lista_titulos = anime.get('titles')
+                    
+                    # Verificamos si la lista de títulos existe y no está vacía
+                    if lista_titulos and len(lista_titulos) > 0:
+                        # Elegimos SOLO el primer título de la lista
+                        nombre_principal = lista_titulos[0].get('title')
+                    
+                    # Añadimos el título (o None si no se encontró) UNA SOLA VEZ
+                    studios_dic['nombre_studio'].append(nombre_principal)
             
-        if response.status_code == 200:
-            print('Petición exitosa')
-            data = response.json()
-            lista_data = data.get('data',[])
-                
-            for anime in lista_data:
-                studios_dic['mal_id'].append(anime.get('mal_id'))
-                studios_dic['favoritos'].append(anime.get('favorites'))
-                studios_dic['establecido'].append(anime.get('established'))
+            else:
+                print(f'Error en la petición \nEstado: {response.status_code}')
+                print(response.text)
 
-                nombre_principal = None
-                lista_titulos = anime.get('titles')
-                
-                # Verificamos si la lista de títulos existe y no está vacía
-                if lista_titulos and len(lista_titulos) > 0:
-                    # Elegimos SOLO el primer título de la lista
-                    nombre_principal = lista_titulos[0].get('title')
-                
-                # Añadimos el título (o None si no se encontró) UNA SOLA VEZ
-                studios_dic['nombre_studio'].append(nombre_principal)
-        
-        else:
-            print(f'Error en la petición \nEstado: {response.status_code}')
-            print(response.text)
-
-    except requests.exceptions.RequestException as e:
-        print(f'Error de conexión: {e}')
+        except requests.exceptions.RequestException as e:
+            print(f'Error de conexión: {e}')
 
     return studios_dic
 
-def extraccion_popularidad():
+def extraccion_popularidad(num_paginas):
     popularidad_dic = {
         'mal_id': [],
         'score': [],
@@ -132,7 +132,7 @@ def extraccion_popularidad():
         'popularidad': []
     }
 
-    for pagina in range(1,3):
+    for pagina in range(1,num_paginas):
         url = f'https://api.jikan.moe/v4/anime?page={pagina}'
 
         try:
@@ -160,13 +160,13 @@ def extraccion_popularidad():
 
     return popularidad_dic
 
-def extraccion_anime_genero():
+def extraccion_anime_genero(num_paginas):
     anime_genero_dic = {
         'mal_id': [],
         'genero_id': [],
     }
 
-    for pagina in range(1,3):
+    for pagina in range(1,num_paginas):
         url = f'https://api.jikan.moe/v4/anime?page={pagina}'
 
         try:
@@ -198,13 +198,13 @@ def extraccion_anime_genero():
 
     return anime_genero_dic
 
-def extraccion_anime_studio():
+def extraccion_anime_studio(num_paginas):
     anime_studio_dic = {
         'mal_id': [],
         'studio_id': [],
     }
 
-    for pagina in range(1,3):
+    for pagina in range(1,num_paginas):
         url = f'https://api.jikan.moe/v4/anime?page={pagina}'
 
         try:
