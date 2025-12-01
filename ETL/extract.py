@@ -79,7 +79,7 @@ def extraccion_genero():
 
     return genero_dic
 
-def extraccion_studios(num_paginas):
+def extraccion_estudios(num_paginas):
     studios_dic = {
         'mal_id': [],
         'nombre_studio': [],
@@ -198,7 +198,7 @@ def extraccion_anime_genero(num_paginas):
 
     return anime_genero_dic
 
-def extraccion_anime_studio(num_paginas):
+def extraccion_anime_estudio(num_paginas):
     anime_studio_dic = {
         'mal_id': [],
         'studio_id': [],
