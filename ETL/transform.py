@@ -93,10 +93,10 @@ def cambio_tipo_dato(lista_df):
 
 anime_raw = extract.extraccion_anime(3)
 genero_raw = extract.extraccion_genero()
-estudio_raw = extract.extraccion_studios(3)
+estudio_raw = extract.extraccion_estudios(3)
 popularidad_raw = extract.extraccion_popularidad(3)
 anime_generos_raw = extract.extraccion_anime_genero(3)
-anime_studios_raw = extract.extraccion_anime_studio(3)
+anime_studios_raw = extract.extraccion_anime_estudio(3)
 
 lista_raw = [pd.DataFrame(anime_raw),
              pd.DataFrame(genero_raw),
