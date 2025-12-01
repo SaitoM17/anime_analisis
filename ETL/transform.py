@@ -3,6 +3,8 @@ import extract
 
 def imputar_df(lista_df: list[pd.DataFrame]) -> list[pd.DataFrame]:
 
+    lista_df_limpios = []
+
     for idx, df in enumerate(lista_df):
         print(f'\n--- Limpiando DataFrame {idx + 1}/{len(lista_df)} (Columnas: {list(df.columns)}) ---')
 
@@ -22,6 +24,10 @@ def imputar_df(lista_df: list[pd.DataFrame]) -> list[pd.DataFrame]:
                 
                 else:
                     print(f"Columna '{columna}' contiene nulos pero no es numérica ni de texto; se omitió.")
+            
+        lista_df_limpios.append(df)
+    
+    return lista_df_limpios
 
 
 anime_raw = extract.extraccion_anime(3)
@@ -40,4 +46,6 @@ lista_raw = [pd.DataFrame(anime_raw),
              ]
                     
 
-imputar_df(lista_raw)
+lista = imputar_df(lista_raw)
+
+print(lista[0])
