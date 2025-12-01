@@ -16,7 +16,7 @@ def extraccion_anime(num_paginas):
         'anime_rank': []
     }
 
-    for pagina in range(1,num_paginas):
+    for pagina in range(1,num_paginas+1):
         url = f'https://api.jikan.moe/v4/anime?page={pagina}'
 
         try:
@@ -86,7 +86,7 @@ def extraccion_estudios(num_paginas):
         'favoritos': [],
         'establecido': []
     }
-    for pagina in range(1,num_paginas):
+    for pagina in range(1,num_paginas+1):
         url = f'https://api.jikan.moe/v4/producers?page={pagina}'
 
         try:
@@ -132,7 +132,7 @@ def extraccion_popularidad(num_paginas):
         'popularidad': []
     }
 
-    for pagina in range(1,num_paginas):
+    for pagina in range(1,num_paginas+1):
         url = f'https://api.jikan.moe/v4/anime?page={pagina}'
 
         try:
@@ -166,7 +166,7 @@ def extraccion_anime_genero(num_paginas):
         'genero_id': [],
     }
 
-    for pagina in range(1,num_paginas):
+    for pagina in range(1,num_paginas+1):
         url = f'https://api.jikan.moe/v4/anime?page={pagina}'
 
         try:
@@ -204,7 +204,7 @@ def extraccion_anime_estudio(num_paginas):
         'studio_id': [],
     }
 
-    for pagina in range(1,num_paginas):
+    for pagina in range(1,num_paginas+1):
         url = f'https://api.jikan.moe/v4/anime?page={pagina}'
 
         try:
