@@ -1,1 +1,2 @@
 CREATE DATABASE anime;
+USE anime;
