@@ -1,17 +1,17 @@
 -- Creación de tablas
 
 -- Tabla: anime
-CREATE TABLE anime (
+CREATE TABLE animes (
     mal_id INT NOT NULL,
     titulo VARCHAR(500) NOT NULL,
-    titulo_english VARCHAR(500),
+    titulo_ingles VARCHAR(500),
     titulo_japanese VARCHAR(500),
     tipo VARCHAR(50),
     episodios INT,
     annio YEAR,
     temporada VARCHAR(50),
     clasificacion VARCHAR(100), 
-    duration VARCHAR(100),
+    duracion VARCHAR(100),
     sinopsis TEXT,
     anime_rank INT, 
     PRIMARY KEY (mal_id)
@@ -45,7 +45,7 @@ CREATE TABLE popularidad (
     PRIMARY KEY (mal_id),
     
     -- Relación: Un anime tiene una única fila de métricas
-    FOREIGN KEY (mal_id) REFERENCES anime(mal_id)
+    FOREIGN KEY (mal_id) REFERENCES animes(mal_id)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -60,7 +60,7 @@ CREATE TABLE anime_generos (
     PRIMARY KEY (mal_id, genero_id),
     
     -- FK al Anime
-    FOREIGN KEY (mal_id) REFERENCES anime(mal_id)
+    FOREIGN KEY (mal_id) REFERENCES animes(mal_id)
         ON DELETE CASCADE ON UPDATE CASCADE,
     
     -- FK al Genero
@@ -77,7 +77,7 @@ CREATE TABLE anime_estudios (
     PRIMARY KEY (mal_id, estudio_id),
     
     -- FK al Anime
-    FOREIGN KEY (mal_id) REFERENCES anime(mal_id)
+    FOREIGN KEY (mal_id) REFERENCES animes(mal_id)
         ON DELETE CASCADE ON UPDATE CASCADE,
         
     -- FK al Estudio
