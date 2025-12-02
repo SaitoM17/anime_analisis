@@ -25,23 +25,23 @@ def load_animes(df):
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             ON DUPLICATE KEY UPDATE
                 titulo = VALUES(titulo),
-                titulo_ingles = (titulo_ingles),
-                titulo_japones = (titulo_japones),
-                tipo = (tipo),
-                episodios = (episodios),
-                annio = (annio),
-                temporada = (temporada),
-                clasificacion = (clasificacion),
-                duracion = (duracion),
-                sinopsis = (sinopsis),
-                anime_rank = (anime_rank)
+                titulo_ingles = VALUES(titulo_ingles),
+                titulo_japones = VALUES(titulo_japones),
+                tipo = VALUES(tipo),
+                episodios = VALUES(episodios),
+                annio = VAALUES(annio),
+                temporada = VALUES(temporada),
+                clasificacion = VALUES(clasificacion),
+                duracion = VALUES(duracion),
+                sinopsis = VALUES(sinopsis),
+                anime_rank = VALUES(anime_rank)
             """
 
             for _, row in df.iterrows():
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla anime insertados/actualizados con éxito ({df.shape[0]} filas).')
+            print(f'Datos de la tabla anime insertados.')
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
