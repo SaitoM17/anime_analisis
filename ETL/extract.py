@@ -52,7 +52,7 @@ def extraccion_anime(num_paginas):
 
 def extraccion_genero():
     genero_dic = {
-        'genre_id': [],
+        'genero_id': [],
         'nombre_genero': [],
     }
 
@@ -67,7 +67,7 @@ def extraccion_genero():
             lista_data = data.get('data',[])
                 
             for genero in lista_data:
-                genero_dic['genre_id'].append(genero.get('mal_id'))
+                genero_dic['genero_id'].append(genero.get('mal_id'))
                 genero_dic['nombre_genero'].append(genero.get('name'))
         
         else:
