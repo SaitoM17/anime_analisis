@@ -77,14 +77,14 @@ def load_generos(df):
             )
             VALUES (%s, %s)
             ON DUPLICATE KEY UPDATE
-                nombre_genero = VALUES(nombre_genero),
+                nombre_genero = VALUES(nombre_genero)
             """
 
             for _, row in df.iterrows():
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla anime insertados/actualizados con éxito ({df.shape[0]} filas).')
+            print(f'Datos de la tabla generos insertados.')
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
