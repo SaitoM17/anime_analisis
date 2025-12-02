@@ -38,7 +38,7 @@ def extraccion_anime(num_paginas):
                     anime_dic['temporada'].append(anime.get('season'))
                     anime_dic['clasifificacion'].append(anime.get('rating'))
                     anime_dic['duracion'].append(anime.get('duration'))
-                    anime_dic['sipnosis'].append(anime.get('synopsis'))
+                    anime_dic['sinopsis'].append(anime.get('synopsis'))
                     anime_dic['anime_rank'].append(anime.get('rank'))
         
             else:
