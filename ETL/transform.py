@@ -34,6 +34,8 @@ def cambio_tipo_dato(lista_df):
     lista_df_tipo_correcto = []
     # Tabla anime
     tabla_anime = lista_df[0]
+    print(f'\n--- DataFrame {"Anime"} antes del cambio ---')
+    print(tabla_anime.info())
     tabla_anime['mal_id'] = tabla_anime['mal_id'].astype(int)
     tabla_anime['titulo'] = tabla_anime['titulo'].astype(object)
     tabla_anime['titulo_ingles'] = tabla_anime['titulo_ingles'].astype(object)
@@ -46,14 +48,23 @@ def cambio_tipo_dato(lista_df):
     tabla_anime['duracion'] = tabla_anime['duracion'].astype(object)
     tabla_anime['sinopsis'] = tabla_anime['sinopsis'].astype(object)
     tabla_anime['anime_rank'] = tabla_anime['anime_rank'].astype(int)
+    print(f'\n--- DataFrame {"Anime"} despues del cambio ---')
+    print(tabla_anime.info())
 
     #Tabla genero
     tabla_genero = lista_df[1]
+    print(f'\n--- DataFrame {"tabla_genero"} antes del cambio ---')
+    print(tabla_genero.info())
     tabla_genero['genero_id'] = tabla_genero['genero_id'].astype(int)
     tabla_genero['nombre_genero'] = tabla_genero['nombre_genero'].astype(object)
+    print(f'\n--- DataFrame {"tabla_genero"} despues del cambio ---')
+    print(tabla_genero.info())
+
 
     #Tabla estudio
     tabla_estudio = lista_df[2]
+    print(f'\n--- DataFrame {"tabla_estudio"} antes del cambio ---')
+    print(tabla_estudio.info())
     tabla_estudio['mal_id'] = tabla_estudio['mal_id'].astype(int)
     tabla_estudio['nombre_studio'] = tabla_estudio['nombre_studio'].astype(object)
     tabla_estudio['favoritos'] = tabla_estudio['favoritos'].astype(int)
@@ -62,25 +73,39 @@ def cambio_tipo_dato(lista_df):
     tabla_estudio['establecido']
     .replace('NaT', None) # Reemplaza la cadena 'NaT' con el objeto Python None
 )
+    print(f'\n--- DataFrame {"tabla_estudio"} despues del cambio ---')
+    print(tabla_estudio.info())
 
     #Tabla de popularidad
     tabla_popularidad = lista_df[3]
+    print(f'\n--- DataFrame {"tabla_popularidad"} antes del cambio ---')
+    print(tabla_popularidad.info())
     tabla_popularidad['mal_id'] = tabla_popularidad['mal_id'].astype(int)
     tabla_popularidad['score'] = tabla_popularidad['score'].astype(float)
     tabla_popularidad['scored_by'] = tabla_popularidad['scored_by'].astype(int)
     tabla_popularidad['miembros'] = tabla_popularidad['miembros'].astype(int)
     tabla_popularidad['favoritos'] = tabla_popularidad['favoritos'].astype(int)
     tabla_popularidad['popularidad'] = tabla_popularidad['popularidad'].astype(int)
+    print(f'\n--- DataFrame {"tabla_popularidad"} despues del cambio ---')
+    print(tabla_popularidad.info())
 
     #Tabla anime_genero
     tabla_anime_genero = lista_df[4]
+    print(f'\n--- DataFrame {"tabla_anime_genero"} antes del cambio ---')
+    print(tabla_anime.info())
     tabla_anime_genero['mal_id'] = tabla_anime_genero['mal_id'].astype(int)
     tabla_anime_genero['genero_id'] = tabla_anime_genero['genero_id'].astype(int)
+    print(f'\n--- DataFrame {"tabla_anime_genero"} despues del cambio ---')
+    print(tabla_anime_genero.info())
 
     #Tabla anime_estudio
     tabla_anime_estudio = lista_df[5]
+    print(f'\n--- DataFrame {"anime_estudios"} antes del cambio ---')
+    print(tabla_anime_estudio.info())
     tabla_anime_estudio['mal_id'] = tabla_anime_estudio['mal_id'].astype(int)
     tabla_anime_estudio['studio_id'] = tabla_anime_estudio['studio_id'].astype(int)
+    print(f'\n--- DataFrame {"anime_estudios"} despues del cambio ---')
+    print(tabla_anime_estudio.info())
 
     lista_df_tipo_correcto.append(tabla_anime)
     lista_df_tipo_correcto.append(tabla_genero)
@@ -90,3 +115,6 @@ def cambio_tipo_dato(lista_df):
     lista_df_tipo_correcto.append(tabla_anime_estudio)
 
     return lista_df_tipo_correcto
+
+
+# En la función cambio_tipo_dato se puede eliminar los print antes y despues del cambio solo, no son tan necesarios.
