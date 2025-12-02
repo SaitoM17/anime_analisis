@@ -90,27 +90,3 @@ def cambio_tipo_dato(lista_df):
     lista_df_tipo_correcto.append(tabla_anime_estudio)
 
     return lista_df_tipo_correcto
-
-anime_raw = extract.extraccion_anime(3)
-genero_raw = extract.extraccion_genero()
-estudio_raw = extract.extraccion_estudios(3)
-popularidad_raw = extract.extraccion_popularidad(3)
-anime_generos_raw = extract.extraccion_anime_genero(3)
-anime_studios_raw = extract.extraccion_anime_estudio(3)
-
-lista_raw = [pd.DataFrame(anime_raw),
-             pd.DataFrame(genero_raw),
-             pd.DataFrame(estudio_raw),
-             pd.DataFrame(popularidad_raw),
-             pd.DataFrame(anime_generos_raw),
-             pd.DataFrame(anime_studios_raw)
-             ]
-                    
-
-lista_df_limpios = imputar_df(lista_raw)
-lista_df_tipo_correcto = cambio_tipo_dato(lista_df_limpios)
-
-# print(cambio_tipo_dato(lista))
-print("\n--- Verificación de Tipos de Datos (Tabla Popularidad) ---")
-print(lista_df_tipo_correcto[2].dtypes)
-print(lista_df_tipo_correcto[2])
