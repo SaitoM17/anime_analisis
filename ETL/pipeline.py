@@ -3,6 +3,10 @@ import extract
 import transform
 import load
 
+num_paginas = 500
+print(f'Configurado para extraer {num_paginas} páginas de datos')
+
+
 def extraccion_data(num_paginas):
     
     print('\n--- INICIO DE EXTRACCIÓN (E) ---')
@@ -54,7 +58,6 @@ def carga_data(df_final):
     print(f'\nPIPELINE "ETL" COMPLETO')
 
 if __name__ == '__main__':
-    num_paginas = int(input('Ingresa haste pagina extraer información: '))
     lista_df_raw = extraccion_data(num_paginas)
     lista_df_final = transformacion_data(lista_df_raw)
     carga_data(lista_df_final)
