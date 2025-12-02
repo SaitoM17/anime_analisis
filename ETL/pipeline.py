@@ -53,6 +53,8 @@ def carga_data(df_final):
 
     print(f'\nPIPELINE "ETL" COMPLETO')
 
-num_paginas = int(input('Ingresa haste pagina extraer información: '))
-tablas = extraccion_data(num_paginas)
-print(transformacion_data(tablas))
+if __name__ == '__main__':
+    num_paginas = int(input('Ingresa haste pagina extraer información: '))
+    lista_df_raw = extraccion_data(num_paginas)
+    lista_df_final = transformacion_data(lista_df_raw)
+    carga_data(lista_df_final)
