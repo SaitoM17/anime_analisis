@@ -29,7 +29,7 @@ def load_animes(df):
                 titulo_japones = VALUES(titulo_japones),
                 tipo = VALUES(tipo),
                 episodios = VALUES(episodios),
-                annio = VAALUES(annio),
+                annio = VALUES(annio),
                 temporada = VALUES(temporada),
                 clasificacion = VALUES(clasificacion),
                 duracion = VALUES(duracion),
@@ -129,7 +129,7 @@ def load_estudios(df):
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla anime insertados/actualizados con éxito ({df.shape[0]} filas).')
+            print(f'Datos de la tabla estudios insertados.')
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
@@ -219,7 +219,7 @@ def load_anime_generos(df):
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla anime insertados/actualizados con éxito ({df.shape[0]} filas).')
+            print(f'Datos de la tabla anime_generos insertados.')
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
@@ -262,7 +262,7 @@ def load_anime_estudios(df):
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla anime insertados/actualizados con éxito ({df.shape[0]} filas).')
+            print(f'Datos de la tabla anime_estudios insertados.')
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
