@@ -187,3 +187,46 @@ def load_popularidad(df):
         if connection is not None and connection.is_connected():
             connection.close()
             print('Conexión cerrada')
+
+def load_anime_generos(df):
+    connection = None
+
+    try:
+        connection = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="saito17Jr",
+            database="anime"
+        )
+
+        if connection.is_connected():
+            db_info = connection.get_server_info()
+            print(f'Conexión exitosa a MySQL version:{db_info}')
+            print('Conectado a la base de datos')
+
+            cursor = connection.cursor()
+
+            insert_query = """
+            INSERT INTO anime_generos(
+                mal_id, genero_id
+            )
+            VALUES (%s, %s)
+            ON DUPLICATE KEY UPDATE
+                genero_id = VALUES(genero_id)
+            """
+
+            for _, row in df.iterrows():
+                cursor.execute(insert_query, tuple(row))
+
+            connection.commit()
+            print(f'Datos de la tabla anime insertados/actualizados con éxito ({df.shape[0]} filas).')
+
+    except mysql.connector.Error as e:
+        print(f'Error al conectar a MySQL {e}')
+        if connection and connection.is_connected():
+            connection.rollback()
+            print('Rollback ejecutado.')
+    finally:
+        if connection is not None and connection.is_connected():
+            connection.close()
+            print('Conexión cerrada')
