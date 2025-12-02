@@ -40,11 +40,11 @@ def carga_data(df_final):
 
     secuencia_carga = [
         (df_final[0], load.load_animes, 'Animes'),
-        (df_final[1], load.load_animes, 'Generos'),
-        (df_final[2], load.load_animes, 'Estudios'),
-        (df_final[3], load.load_animes, 'Popularidad'),
-        (df_final[4], load.load_animes, 'Animes_Generos'),
-        (df_final[5], load.load_animes, 'Animes_Estudios'),
+        (df_final[1], load.load_generos, 'Generos'),
+        (df_final[2], load.load_estudios, 'Estudios'),
+        (df_final[3], load.load_popularidad, 'Popularidad'),
+        (df_final[4], load.load_anime_generos, 'Animes_Generos'),
+        (df_final[5], load.load_anime_estudios, 'Animes_Estudios'),
     ]
 
     for df, fun_load, nombre_tabla in secuencia_carga:
