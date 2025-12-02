@@ -3,8 +3,6 @@ import extract
 
 def extraccion_data(num_paginas):
 
-    lista_df_raw = []
-
     data_animes_raw = extract.extraccion_anime(num_paginas)
     data_generos_raw = extract.extraccion_genero()
     data_estudios_raw = extract.extraccion_estudios(num_paginas)
