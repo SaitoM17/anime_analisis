@@ -44,7 +44,7 @@ def cambio_tipo_dato(lista_df):
     tabla_anime['temporada'] = tabla_anime['temporada'].astype(object)
     tabla_anime['clasifificacion'] = tabla_anime['clasifificacion'].astype(object)
     tabla_anime['duracion'] = tabla_anime['duracion'].astype(object)
-    tabla_anime['sipnosis'] = tabla_anime['sipnosis'].astype(object)
+    tabla_anime['sinopsis'] = tabla_anime['sinopsis'].astype(object)
     tabla_anime['anime_rank'] = tabla_anime['anime_rank'].astype(int)
 
     #Tabla genero
@@ -60,7 +60,7 @@ def cambio_tipo_dato(lista_df):
     tabla_estudio['establecido'] = (pd.to_datetime(tabla_estudio['establecido'], errors='coerce').dt.date.astype(str))
     tabla_estudio['establecido'] = (
     tabla_estudio['establecido']
-    .replace('NaT', 0) # Reemplaza la cadena 'NaT' con el objeto Python None
+    .replace('NaT', None) # Reemplaza la cadena 'NaT' con el objeto Python None
 )
 
     #Tabla de popularidad
