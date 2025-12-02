@@ -25,11 +25,11 @@ def extraccion_data(num_paginas):
 
     return lista_df_raw
 
-def transformacion_data(df):
+def transformacion_data(lista_df_raw):
 
     print('\n--- INICIO DE TRANSFORMACIÓN (T) ---')
 
-    lista_df_imputados = transform.imputar_df(df)
+    lista_df_imputados = transform.imputar_df(lista_df_raw)
     lista_df_cambio_tipo = transform.cambio_tipo_dato(lista_df_imputados)
 
     return lista_df_cambio_tipo
@@ -37,7 +37,7 @@ def transformacion_data(df):
 def carga_data(df_final):
 
     print('\n--- INICIO DE CARGA (L) ---')
-    
+
     secuencia_carga = [
         (df_final[0], load.load_animes, 'Animes'),
         (df_final[1], load.load_animes, 'Generos'),
