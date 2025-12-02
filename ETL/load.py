@@ -161,12 +161,12 @@ def load_popularidad(df):
 
             insert_query = """
             INSERT INTO popularidad(
-                mal_id, score, score_by, miembros, favoritos, popularidad
+                mal_id, score, scored_by, miembros, favoritos, popularidad
             )
             VALUES (%s, %s, %s, %s, %s, %s)
             ON DUPLICATE KEY UPDATE
                 score = VALUES(score),
-                score_by = VALUES(score_by),
+                scored_by = VALUES(scored_by),
                 miembros = VALUES(miembros),
                 favoritos = VALUES(favoritos),
                 popularidad = VALUES(popularidad)
@@ -176,7 +176,7 @@ def load_popularidad(df):
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla anime insertados/actualizados con éxito ({df.shape[0]} filas).')
+            print(f'Datos de la tabla popularidad intesertados.')
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
