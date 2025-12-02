@@ -1,4 +1,5 @@
 import requests
+import time
 
 def extraccion_anime(num_paginas):
     anime_dic = {
@@ -21,6 +22,8 @@ def extraccion_anime(num_paginas):
 
         try:
             response = requests.get(url)
+
+            time.sleep(0.5)
             
             if response.status_code == 200:
                 print('Petición exitosa')
@@ -91,6 +94,8 @@ def extraccion_estudios(num_paginas):
 
         try:
             response = requests.get(url)
+
+            time.sleep(0.5)
                 
             if response.status_code == 200:
                 print('Petición exitosa')
@@ -137,6 +142,8 @@ def extraccion_popularidad(num_paginas):
 
         try:
             response = requests.get(url)
+
+            time.sleep(0.5)
             
             if response.status_code == 200:
                 print('Petición exitosa')
@@ -171,6 +178,8 @@ def extraccion_anime_genero(num_paginas):
 
         try:
             response = requests.get(url)
+
+            time.sleep(0.5)
             
             if response.status_code == 200:
                 print('Petición exitosa')
@@ -209,6 +218,8 @@ def extraccion_anime_estudio(num_paginas):
 
         try:
             response = requests.get(url)
+
+            time.sleep(0.5)
             
             if response.status_code == 200:
                 print('Petición exitosa')
