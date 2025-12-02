@@ -49,7 +49,7 @@ def cambio_tipo_dato(lista_df):
 
     #Tabla genero
     tabla_genero = lista_df[1]
-    tabla_genero['genre_id'] = tabla_genero['genre_id'].astype(int)
+    tabla_genero['genero_id'] = tabla_genero['genero_id'].astype(int)
     tabla_genero['nombre_genero'] = tabla_genero['nombre_genero'].astype(object)
 
     #Tabla estudio
