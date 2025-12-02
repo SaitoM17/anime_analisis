@@ -12,7 +12,7 @@ def extraccion_anime(num_paginas):
         'temporada': [],
         'clasifificacion': [],
         'duracion': [],
-        'sipnosis': [],
+        'sinopsis': [],
         'anime_rank': []
     }
 
