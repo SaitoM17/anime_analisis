@@ -1,5 +1,6 @@
 import pandas as pd
 import extract
+import transform
 
 def extraccion_data(num_paginas):
 
@@ -21,19 +22,13 @@ def extraccion_data(num_paginas):
 
     return lista_df_raw
 
+def transformacion_data(df):
+    lista_df_imputados = transform.imputar_df(df)
+    lista_df_cambio_tipo = transform.cambio_tipo_dato(lista_df_imputados)
+
+    return lista_df_cambio_tipo
+
 
 num_paginas = int(input('Ingresa haste pagina extraer información: '))
 tablas = extraccion_data(num_paginas)
-
-print(f'Tabla animes')
-print(tablas[0].info())
-print(f'\nTabla generos')
-print(tablas[1].info())
-print(f'\nTabla estudios')
-print(tablas[2].info())
-print(f'\nTabla popularidad')
-print(tablas[3].info())
-print(f'\nTabla anime_generos')
-print(tablas[4].info())
-print(f'\nTabla anime_estudios')
-print(tablas[5].info())
+print(transformacion_data(tablas))
