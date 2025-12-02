@@ -19,7 +19,7 @@ def load_animes(df):
             cursor = connection.cursor()
 
             insert_query = """
-            INSERT INTO anime(
+            INSERT INTO animes(
                 mal_id, titulo, titulo_english, titulo_japanese, tipo, episodios, annio, temporada, clasificacion, duracion, sinopsis, anime_rank
             )
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
@@ -72,7 +72,7 @@ def load_generos(df):
             cursor = connection.cursor()
 
             insert_query = """
-            INSERT INTO genros(
+            INSERT INTO generos(
                 genero_id, nombre_genero
             )
             VALUES (%s, %s)
@@ -115,7 +115,7 @@ def load_estudios(df):
             cursor = connection.cursor()
 
             insert_query = """
-            INSERT INTO genros(
+            INSERT INTO estudios(
                 estudio_id, nombre_estudio, favoritos, establecido
             )
             VALUES (%s, %s, %s, %s)
@@ -160,7 +160,7 @@ def load_popularidad(df):
             cursor = connection.cursor()
 
             insert_query = """
-            INSERT INTO genros(
+            INSERT INTO popularidad(
                 mal_id, score, score_by, miembros, favoritos, popularidad
             )
             VALUES (%s, %s, %s, %s, %s, %s)
