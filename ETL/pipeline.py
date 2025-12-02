@@ -4,7 +4,9 @@ import transform
 import load
 
 def extraccion_data(num_paginas):
-
+    
+    print('\n--- INICIO DE EXTRACCIÓN (E) ---')
+    
     data_animes_raw = extract.extraccion_anime(num_paginas)
     data_generos_raw = extract.extraccion_genero()
     data_estudios_raw = extract.extraccion_estudios(num_paginas)
@@ -24,12 +26,18 @@ def extraccion_data(num_paginas):
     return lista_df_raw
 
 def transformacion_data(df):
+
+    print('\n--- INICIO DE TRANSFORMACIÓN (T) ---')
+
     lista_df_imputados = transform.imputar_df(df)
     lista_df_cambio_tipo = transform.cambio_tipo_dato(lista_df_imputados)
 
     return lista_df_cambio_tipo
 
 def carga_data(df_final):
+
+    print('\n--- INICIO DE CARGA (L) ---')
+    
     secuencia_carga = [
         (df_final[0], load.load_animes, 'Animes'),
         (df_final[1], load.load_animes, 'Generos'),
@@ -42,6 +50,8 @@ def carga_data(df_final):
     for df, fun_load, nombre_tabla in secuencia_carga:
         print(f'Cargando datos de tabla {nombre_tabla} ({df.shape[0]} filas)...')
         fun_load(df)
+
+    print(f'\nPIPELINE "ETL" COMPLETO')
 
 num_paginas = int(input('Ingresa haste pagina extraer información: '))
 tablas = extraccion_data(num_paginas)
