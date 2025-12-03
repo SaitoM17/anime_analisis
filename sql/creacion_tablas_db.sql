@@ -5,7 +5,7 @@ CREATE TABLE animes (
     mal_id INT NOT NULL,
     titulo VARCHAR(500) NOT NULL,
     titulo_ingles VARCHAR(500),
-    titulo_japanese VARCHAR(500),
+    titulo_japones VARCHAR(500),
     tipo VARCHAR(50),
     episodios INT,
     annio YEAR,
@@ -29,7 +29,7 @@ CREATE TABLE estudios (
     estudio_id INT NOT NULL,
     nombre_estudio VARCHAR(255) UNIQUE NOT NULL,
     favoritos INT,
-    establecido YEAR,
+    establecido DATE,
     PRIMARY KEY (estudio_id)
 );
 
