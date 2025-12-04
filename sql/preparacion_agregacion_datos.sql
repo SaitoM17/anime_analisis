@@ -104,3 +104,51 @@ ORDER BY
 -- Se observa que el genero de anime Suspense es el principal con un promedio de 7.1 de score, también se muestra el genero "Award Winning" con 7.1, 
 -- como tal este no es un genero de anime sino una descripción o criterio de selección ya que este "genero" son de animes que han gando premedio, se tendria que considerar si se incluirlo
 -- en el ranking de generos por popularidad o excluirlo ya que como tal no es un genero.
+
+-- 2.-Generos dominantes por decada
+WITH rango AS(
+	SELECT
+		-- Calcula el año de inicio de la década
+		FLOOR((CAST(a.annio AS SIGNED) - 2000) / 10) * 10 + 2000 AS Rango_Decenal_Inicio,
+		g.nombre_genero,
+        COUNT(a.mal_id) AS total_animes_por_genero
+	FROM
+		animes a
+	INNER JOIN anime_generos ag
+		ON a.mal_id = ag.mal_id
+	INNER JOIN generos g
+		ON ag.genero_id = g.genero_id
+	WHERE 
+		annio >= 1960
+	GROUP BY
+		Rango_Decenal_Inicio,
+        g.nombre_genero
+),
+RankedGenres AS (
+    SELECT
+        *,
+        -- 2. Clasificar los géneros DENTRO de cada década (PARTITION BY)
+        -- RANK() asigna el mismo rango en caso de empate de conteo.
+        RANK() OVER (
+            PARTITION BY 
+                Rango_Decenal_Inicio
+            ORDER BY 
+                Total_Animes_Por_Genero DESC -- Ordena por el conteo (mayor a menor) para el top
+        ) AS rank_por_decada
+    FROM
+        rango
+)
+SELECT
+    Rango_Decenal_Inicio AS Década,
+    nombre_genero AS Género,
+    Total_Animes_Por_Genero AS Conteo
+FROM
+    RankedGenres
+WHERE
+    -- 3. Filtrar para mostrar solo el Top 10 de cada década
+    rank_por_decada <= 1
+ORDER BY
+    Rango_Decenal_Inicio DESC,
+    Conteo DESC;
+    
+-- La consulta nos muestra que el genero de comedia es el que más aparace en lo largo de las decadas, esto nos dice que el mayoria de los animes el genero de comedia estya presente.
