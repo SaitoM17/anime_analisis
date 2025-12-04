@@ -21,3 +21,10 @@ SELECT
     SUM(IF(anime_rank IS NULL, 1, 0)) AS nulos_anime_rank
 FROM
     animes;
+
+-- Identificación de valores nulos en tabla generos
+SELECT
+    SUM(IF(genero_id IS NULL, 1, 0)) AS nulos_genero_id,
+    SUM(IF(nombre_genero IS NULL, 1, 0)) AS nulos_nombre_genero
+FROM
+    generos;
