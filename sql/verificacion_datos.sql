@@ -38,3 +38,13 @@ SELECT
 FROM
     estudios;
 -- Se identifico 1355 valores nulos en la columna establecido y 78 valores faltantes.
+
+-- Identificación de valores nulos en tabla popularidad
+SELECT
+    SUM(IF(mal_id IS NULL, 1, 0)) AS nulos_mal_id,
+    SUM(IF(score IS NULL, 1, 0)) AS nulos_score,
+    SUM(IF(scored_by IS NULL, 1, 0)) AS nulos_scored_by,
+    SUM(IF(favoritos IS NULL, 1, 0)) AS nulos_favoritos,
+    SUM(IF(popularidad IS NULL,1,0)) AS nulos_popularidad
+FROM
+    popularidad;
