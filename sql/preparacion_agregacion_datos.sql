@@ -81,3 +81,26 @@ ORDER BY
     Conteo DESC;
 
 -- Con los resultados obtenido nos damos una idea de los generos más visto en cada decada.
+
+-- # Calidad y popularidad
+
+-- 1.-Ranking de genero por popularidad
+SELECT
+	g.nombre_genero,
+	ROUND(AVG(p.score), 2) promedio_score
+FROM
+	animes a
+INNER JOIN	popularidad p
+	ON a.mal_id = p.mal_id
+INNER JOIN anime_generos ag
+	ON a.mal_id = ag.mal_id
+INNER JOIN generos g
+	ON ag.genero_id = g.genero_id
+GROUP BY
+	g.nombre_genero
+ORDER BY
+	promedio_score DESC;
+
+-- Se observa que el genero de anime Suspense es el principal con un promedio de 7.1 de score, también se muestra el genero "Award Winning" con 7.1, 
+-- como tal este no es un genero de anime sino una descripción o criterio de selección ya que este "genero" son de animes que han gando premedio, se tendria que considerar si se incluirlo
+-- en el ranking de generos por popularidad o excluirlo ya que como tal no es un genero.
