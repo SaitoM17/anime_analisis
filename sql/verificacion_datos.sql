@@ -48,3 +48,10 @@ SELECT
     SUM(IF(popularidad IS NULL,1,0)) AS nulos_popularidad
 FROM
     popularidad;
+    
+-- Identificación de valores nulos en tabla animes_generos
+SELECT
+    SUM(IF(mal_id IS NULL, 1, 0)) AS nulos_mal_id,
+    SUM(IF(genero_id IS NULL, 1, 0)) AS nulos_genero_id
+FROM
+    anime_generos;
