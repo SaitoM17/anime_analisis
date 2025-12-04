@@ -55,3 +55,10 @@ SELECT
     SUM(IF(genero_id IS NULL, 1, 0)) AS nulos_genero_id
 FROM
     anime_generos;
+    
+-- Identificación de valores nulos en tabla animes_estudios
+SELECT
+    SUM(IF(mal_id IS NULL, 1, 0)) AS nulos_mal_id,
+    SUM(IF(estudio_id IS NULL, 1, 0)) AS nulos_estudio_id
+FROM
+    anime_estudios;
