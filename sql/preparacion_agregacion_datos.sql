@@ -152,3 +152,25 @@ ORDER BY
     Conteo DESC;
     
 -- La consulta nos muestra que el genero de comedia es el que más aparace en lo largo de las decadas, esto nos dice que el mayoria de los animes el genero de comedia estya presente.
+
+-- # Desempeño de estudios
+
+-- 1.-ranking de estudios
+SELECT
+	e.nombre_estudio,
+	ROUND(AVG(p.score), 2) AS promedio_score
+FROM
+	animes a
+INNER JOIN anime_estudios ae
+	ON a.mal_id = ae.mal_id
+INNER JOIN estudios e
+	ON ae.estudio_id = e.estudio_id
+INNER JOIN popularidad p
+	ON p.mal_id = a.mal_id
+GROUP BY
+	e.nombre_estudio
+ORDER BY
+	promedio_score DESC;
+    
+-- La consutla nos muestra el score promedio que han tendio en base a los animes producidos, en dicha consulta tambien aparecen estudios que no tiene 
+-- un score posiblemente esto se deba a la falta de datos.
