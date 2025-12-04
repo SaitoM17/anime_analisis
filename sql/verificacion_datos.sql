@@ -28,3 +28,13 @@ SELECT
     SUM(IF(nombre_genero IS NULL, 1, 0)) AS nulos_nombre_genero
 FROM
     generos;
+    
+-- Identificación de valores nulos en tabla estudios
+SELECT
+    SUM(IF(estudio_id IS NULL, 1, 0)) AS nulos_estudio_id,
+    SUM(IF(nombre_estudio IS NULL, 1, 0)) AS nulos_nombre_estudio,
+    SUM(IF(favoritos IS NULL, 1, 0)) AS nulos_titulo_favoritos,
+    SUM(IF(establecido IS NULL, 1, 0)) AS nulos_establecido
+FROM
+    estudios;
+-- Se identifico 1355 valores nulos en la columna establecido y 78 valores faltantes.
