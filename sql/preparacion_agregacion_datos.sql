@@ -174,3 +174,23 @@ ORDER BY
     
 -- La consutla nos muestra el score promedio que han tendio en base a los animes producidos, en dicha consulta tambien aparecen estudios que no tiene 
 -- un score posiblemente esto se deba a la falta de datos.
+
+-- 2.-producción por año
+SELECT
+	a.annio,
+    e.nombre_estudio,
+    COUNT(a.mal_id) AS cant_producida
+FROM
+	animes a
+INNER JOIN anime_estudios ae
+	ON a.mal_id = ae.mal_id
+INNER JOIN estudios e
+	ON ae.estudio_id = e.estudio_id
+GROUP BY
+	a.annio,
+    e.nombre_estudio
+ORDER BY
+	a.annio DESC;
+    
+-- Gracias a la consutla podemos obtener la cantidad de animes producidos por cada estudio en cada año, algunos estudios solo llegan a producir un solo anime por año, esto se puede deber
+-- a la tamaño del estudio y no necesariamente a la falta de datos, ya que no se tiene un promedio/cantidad de animes que produce un estudio por año.
