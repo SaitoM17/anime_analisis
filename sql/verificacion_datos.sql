@@ -62,3 +62,20 @@ SELECT
     SUM(IF(estudio_id IS NULL, 1, 0)) AS nulos_estudio_id
 FROM
     anime_estudios;
+
+-- Identificación de valores faltantes en tabla anime(valores N/A en string o text y valores 0 en int o float)
+SELECT
+	SUM(IF(mal_id = 0, 1, 0)) AS Faltantes_mal_id,
+    SUM(IF(titulo LIKE '%N/A', 1, 0)) AS Faltantes_titulo,
+    SUM(IF(titulo_ingles LIKE '%N/A', 1, 0)) AS Faltantes_titulo_ingles,
+    SUM(IF(titulo_japones LIKE '%N/A', 1, 0)) AS Faltantes_titulo_japones,
+    SUM(IF(tipo LIKE '%N/A', 1, 0)) AS Faltantes_tipo,
+    SUM(IF(episodios = 0, 1, 0)) AS Faltantes_episodios,
+    SUM(IF(temporada LIKE '%N/A', 1, 0)) AS Faltantes_temporada,
+    SUM(IF(clasificacion LIKE '%N/A', 1, 0)) AS Faltantes_clasificación,
+    SUM(IF(duracion LIKE '%N/A', 1, 0)) AS Faltantes_duración,
+    SUM(IF(sinopsis LIKE '%N/A', 1, 0)) AS Faltantes_sinopsis,
+    SUM(IF(anime_rank = 0, 1, 0)) AS Faltantes_anime_rank
+FROM
+	animes;
+-- Se identificaron varias columnas con valores faltnates 'N/A' y valores '0'.
