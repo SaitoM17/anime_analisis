@@ -1,8 +1,8 @@
 -- Realizaremos unas consultas para ir familiarizandos con la base de datos
 
--- Conocer la tendencias generales
+-- # Conocer la tendencias generales
 
--- Promedio general por año
+-- 1.-Promedio general por año
 SELECT
 	ani.annio annio,
 	ROUND(AVG(pop.score), 2) Promedio
