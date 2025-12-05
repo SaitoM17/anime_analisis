@@ -60,4 +60,10 @@ def carga_data(df_final):
 if __name__ == '__main__':
     lista_df_raw = extraccion_data(num_paginas)
     lista_df_final = transformacion_data(lista_df_raw)
+
+    # df_estudios = lista_df_final[2]
+    # total_registros = len(df_estudios)
+    # registros_unicos = len(df_estudios['mal_id'].unique())
+
+    # print(f"DataFrame Estudios: Total filas: {total_registros}, Filas únicas por ID: {registros_unicos}")
     carga_data(lista_df_final)
