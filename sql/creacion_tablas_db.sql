@@ -4,8 +4,6 @@
 CREATE TABLE animes (
     mal_id INT NOT NULL,
     titulo VARCHAR(500) NOT NULL,
-    titulo_ingles VARCHAR(500),
-    titulo_japones VARCHAR(500),
     tipo VARCHAR(50),
     episodios INT,
     annio YEAR,
