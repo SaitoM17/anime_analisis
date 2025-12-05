@@ -62,20 +62,69 @@ SELECT
     SUM(IF(estudio_id IS NULL, 1, 0)) AS nulos_estudio_id
 FROM
     anime_estudios;
-
+-- --------------------------------------------------------------------------------------------------------------------------------------------------
 -- Identificación de valores faltantes en tabla anime(valores N/A en string o text y valores 0 en int o float)
 SELECT
-	SUM(IF(mal_id = 0, 1, 0)) AS Faltantes_mal_id,
-    SUM(IF(titulo LIKE '%N/A', 1, 0)) AS Faltantes_titulo,
-    SUM(IF(titulo_ingles LIKE '%N/A', 1, 0)) AS Faltantes_titulo_ingles,
-    SUM(IF(titulo_japones LIKE '%N/A', 1, 0)) AS Faltantes_titulo_japones,
-    SUM(IF(tipo LIKE '%N/A', 1, 0)) AS Faltantes_tipo,
+	SUM(IF(mal_id IS NULL, 1, 0)) AS Faltantes_mal_id,
+    SUM(IF(titulo LIKE '%N/A%', 1, 0)) AS Faltantes_titulo,
+    SUM(IF(titulo_ingles LIKE '%N/A%', 1, 0)) AS Faltantes_titulo_ingles,
+    SUM(IF(titulo_japones LIKE '%N/A%', 1, 0)) AS Faltantes_titulo_japones,
+    SUM(IF(tipo LIKE '%N/A%', 1, 0)) AS Faltantes_tipo,
     SUM(IF(episodios = 0, 1, 0)) AS Faltantes_episodios,
-    SUM(IF(temporada LIKE '%N/A', 1, 0)) AS Faltantes_temporada,
-    SUM(IF(clasificacion LIKE '%N/A', 1, 0)) AS Faltantes_clasificación,
-    SUM(IF(duracion LIKE '%N/A', 1, 0)) AS Faltantes_duración,
-    SUM(IF(sinopsis LIKE '%N/A', 1, 0)) AS Faltantes_sinopsis,
+    SUM(IF(temporada LIKE '%N/A%', 1, 0)) AS Faltantes_temporada,
+    SUM(IF(clasificacion LIKE '%N/A%', 1, 0)) AS Faltantes_clasificación,
+    SUM(IF(duracion LIKE '%N/A%', 1, 0)) AS Faltantes_duración,
+    SUM(IF(sinopsis LIKE '%N/A%', 1, 0)) AS Faltantes_sinopsis,
     SUM(IF(anime_rank = 0, 1, 0)) AS Faltantes_anime_rank
 FROM
 	animes;
 -- Se identificaron varias columnas con valores faltnates 'N/A' y valores '0'.
+-- Las columnmas que se sabe que se imputaron con N/A y 0 son:
+-- 'titulo_ingles': Nulos rellenados con 'N/A'
+-- 'episodios': Nulos rellenados con 0
+-- 'annio': Nulos rellenados con 0
+-- 'temporada': Nulos rellenados con 'N/A'
+-- El resto de columnas se revisara para identificar los posibles errores.
+
+-- Identificación de valores faltantes en tabla genero(valores N/A en string o text y valores 0 en int o float)
+SELECT
+	SUM(IF(genero_id IS NULL, 1, 0)) AS Faltantes_genero_id,
+    SUM(IF(nombre_genero LIKE '%N/A%', 1, 0)) AS Faltantes_nombre_genero
+FROM
+	generos;
+    
+-- Identificación de valores faltantes en tabla estudios(valores N/A en string o text y valores 0 en int o float)
+SELECT
+	SUM(IF(estudio_id IS NULL, 1, 0)) AS Faltantes_estudio_id,
+    SUM(IF(nombre_estudio LIKE '%N/A%', 1, 0)) AS Faltantes_nombre_estudio,
+    SUM(IF(favoritos = 0, 1, 0)) AS Faltantes_favoritos,
+    SUM(IF(establecido IS NULL, 1, 0)) AS Faltantes_establecido
+FROM
+	estudios;
+-- Los valores que aparecen como faltantes no son faltantes en la columna 0.
+-- Los valores faltantes en la columna establecido es por falta de año (de cuanto se fundaron)
+    
+-- Identificación de valores faltantes en tabla popularidad(valores N/A en string o text y valores 0 en int o float)
+SELECT
+	SUM(IF(mal_id IS NULL, 1, 0)) AS Faltantes_mal_id,
+    SUM(IF(score IS NULL, 1, 0)) AS Faltantes_score,
+    SUM(IF(scored_by  IS NULL, 1, 0)) AS Faltantes_score_by,
+    SUM(IF(miembros  IS NULL, 1, 0)) AS Faltantes_miembros,
+    SUM(IF(favoritos  IS NULL, 1, 0)) AS Faltantes_favoritos,
+    SUM(IF(popularidad IS NULL, 1, 0)) AS Faltantes_popularidad
+FROM
+	popularidad;
+    
+-- Identificación de valores faltantes en tabla anime(valores N/A en string o text y valores 0 en int o float)
+SELECT
+	SUM(IF(mal_id IS NULL, 1, 0)) AS Faltantes_mal_id,
+    SUM(IF(genero_id IS NULL, 1, 0)) AS Faltantes_genero_id
+FROM
+	anime_generos;
+
+-- Identificación de valores faltantes en tabla anime(valores N/A en string o text y valores 0 en int o float)
+SELECT
+	SUM(IF(mal_id IS NULL, 1, 0)) AS Faltantes_mal_id,
+    SUM(IF(estudio_id IS NULL, 1, 0)) AS Faltantes_estudio_id
+FROM
+	anime_estudios;
