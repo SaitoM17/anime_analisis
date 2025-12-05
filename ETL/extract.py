@@ -5,13 +5,11 @@ def extraccion_anime(num_paginas):
     anime_dic = {
         'mal_id': [],
         'titulo': [],
-        'titulo_ingles': [],
-        'titulo_japones': [],
         'tipo': [],
         'episodios': [],
         'annio': [],
         'temporada': [],
-        'clasifificacion': [],
+        'clasificacion': [],
         'duracion': [],
         'sinopsis': [],
         'anime_rank': []
@@ -31,18 +29,33 @@ def extraccion_anime(num_paginas):
                 lista_data = data.get('data',[])
                 
                 for anime in lista_data:
-                    anime_dic['mal_id'].append(anime.get('mal_id'))
-                    anime_dic['titulo'].append(anime.get('title'))
-                    anime_dic['titulo_ingles'].append(anime.get('title_english'))
-                    anime_dic['titulo_japones'].append(anime.get('title_japanese'))
-                    anime_dic['tipo'].append(anime.get('type'))
-                    anime_dic['episodios'].append(anime.get('episodes'))
-                    anime_dic['annio'].append(anime.get('year'))
-                    anime_dic['temporada'].append(anime.get('season'))
-                    anime_dic['clasifificacion'].append(anime.get('rating'))
-                    anime_dic['duracion'].append(anime.get('duration'))
-                    anime_dic['sinopsis'].append(anime.get('synopsis'))
-                    anime_dic['anime_rank'].append(anime.get('rank'))
+                    lista_titulos = anime.get('titles')
+
+                    if lista_titulos:
+                        for titulo in lista_titulos:
+                            titulo_ = titulo.get('title')
+                            break
+                    
+                    mal_id = anime.get('mal_id')
+                    tipo = anime.get('type')
+                    episodios = anime.get('episodes')
+                    annio = anime.get('year')
+                    season = anime.get('season')
+                    rating = anime.get('rating')
+                    duracion = anime.get('duration')
+                    synopsis = anime.get('synopsis')
+                    rank_anime = anime.get('rank')
+
+                    anime_dic['mal_id'].append(mal_id)
+                    anime_dic['titulo'].append(titulo_)
+                    anime_dic['tipo'].append(tipo)
+                    anime_dic['episodios'].append(episodios)
+                    anime_dic['annio'].append(annio)
+                    anime_dic['temporada'].append(season)
+                    anime_dic['clasificacion'].append(rating)
+                    anime_dic['duracion'].append(duracion)
+                    anime_dic['sinopsis'].append(synopsis)
+                    anime_dic['anime_rank'].append(rank_anime)
         
             else:
                 print(f'Error en la petición \nEstado: {response.status_code}')
