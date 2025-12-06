@@ -41,7 +41,13 @@ def load_animes(df):
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla anime insertados.')
+
+            cursor.execute("SELECT COUNT(mal_id) FROM animes;")
+            conteo_final = cursor.fetchone()[0] # Obtiene el resultado del conteo
+        
+            print(f'Datos de la tabla animes insertados. Conteo final en DB: {conteo_final}')
+
+            return conteo_final
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
@@ -84,7 +90,13 @@ def load_generos(df):
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla generos insertados.')
+
+            cursor.execute("SELECT COUNT(genero_id) FROM generos;")
+            conteo_final = cursor.fetchone()[0] # Obtiene el resultado del conteo
+        
+            print(f'Datos de la tabla genero insertados. Conteo final en DB: {conteo_final}')
+
+            return conteo_final
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
@@ -129,7 +141,13 @@ def load_estudios(df):
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla estudios insertados.')
+
+            cursor.execute("SELECT COUNT(estudio_id) FROM estudios;")
+            conteo_final = cursor.fetchone()[0] # Obtiene el resultado del conteo
+        
+            print(f'Datos de la tabla estudios insertados. Conteo final en DB: {conteo_final}')
+
+            return conteo_final
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
@@ -176,7 +194,13 @@ def load_popularidad(df):
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla popularidad intesertados.')
+
+            cursor.execute("SELECT COUNT(mal_id) FROM popularidad;")
+            conteo_final = cursor.fetchone()[0] # Obtiene el resultado del conteo
+        
+            print(f'Datos de la tabla popularidad insertados. Conteo final en DB: {conteo_final}')
+
+            return conteo_final
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
@@ -219,7 +243,13 @@ def load_anime_generos(df):
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla anime_generos insertados.')
+
+            cursor.execute("SELECT COUNT(mal_id) FROM anime_generos;")
+            conteo_final = cursor.fetchone()[0] # Obtiene el resultado del conteo
+        
+            print(f'Datos de la tabla anime_generos insertados. Conteo final en DB: {conteo_final}')
+
+            return conteo_final
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
@@ -262,7 +292,13 @@ def load_anime_estudios(df):
                 cursor.execute(insert_query, tuple(row))
 
             connection.commit()
-            print(f'Datos de la tabla anime_estudios insertados.')
+
+            cursor.execute("SELECT COUNT(mal_id) FROM anime_estudios;")
+            conteo_final = cursor.fetchone()[0] # Obtiene el resultado del conteo
+        
+            print(f'Datos de la tabla anime_estudios insertados. Conteo final en DB: {conteo_final}')
+
+            return conteo_final
 
     except mysql.connector.Error as e:
         print(f'Error al conectar a MySQL {e}')
