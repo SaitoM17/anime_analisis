@@ -102,6 +102,8 @@ INNER JOIN anime_generos ag
 	ON a.mal_id = ag.mal_id
 INNER JOIN generos g
 	ON ag.genero_id = g.genero_id
+WHERE
+	p.score < 9999
 GROUP BY
 	g.nombre_genero
 ORDER BY
