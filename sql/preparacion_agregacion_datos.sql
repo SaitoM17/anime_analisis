@@ -174,6 +174,8 @@ INNER JOIN estudios e
 	ON ae.estudio_id = e.estudio_id
 INNER JOIN popularidad p
 	ON p.mal_id = a.mal_id
+WHERE
+	p.score < 9999
 GROUP BY
 	e.nombre_estudio
 ORDER BY
