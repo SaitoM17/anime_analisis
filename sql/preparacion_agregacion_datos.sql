@@ -153,13 +153,12 @@ SELECT
 FROM
     RankedGenres
 WHERE
-    -- 3. Filtrar para mostrar solo el Top 10 de cada década
     rank_por_decada <= 1
 ORDER BY
     Rango_Decenal_Inicio DESC,
     Conteo DESC;
     
--- La consulta nos muestra que el genero de comedia es el que más aparace en lo largo de las decadas, esto nos dice que el mayoria de los animes el genero de comedia estya presente.
+-- La consulta nos muestra que el genero de comedia es el que más aparace en lo largo de las decadas, esto nos dice que el mayoria de los animes contiene el genero de comedia.
 
 -- # Desempeño de estudios
 
