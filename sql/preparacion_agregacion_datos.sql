@@ -28,6 +28,8 @@ SELECT
     COUNT(mal_id) as total_animes
 FROM
 	animes
+WHERE
+	annio > 0
 GROUP BY
 	annio,
     temporada
