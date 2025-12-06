@@ -18,7 +18,7 @@ def imputar_df(lista_df: list[pd.DataFrame]) -> list[pd.DataFrame]:
         if 'annio' in df.columns:
             df['annio'] = df['annio'].fillna(2261)
             print(f"Imputación 'annio': Nulos rellenados con '2261' ")
-            
+
         # Detectar valores nulos e imputarlos con 'N/A y '0
         for columna in df.columns:
             if df[columna].isnull().any():
@@ -68,8 +68,6 @@ def cambio_tipo_dato(lista_df):
     tabla_estudio['nombre_studio'] = tabla_estudio['nombre_studio'].astype(object)
     tabla_estudio['favoritos'] = tabla_estudio['favoritos'].astype(int)
     tabla_estudio['establecido'] = pd.to_datetime(tabla_estudio['establecido'], format='%Y-%m-%d')
-    # tabla_estudio['establecido'] = tabla_estudio['establecido'].dt.strftime('%Y-%m-%d')
-    print(tabla_estudio.info())
 
     #Tabla de popularidad
     tabla_popularidad = lista_df[3]
