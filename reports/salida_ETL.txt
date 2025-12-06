@@ -1,0 +1,58 @@
+--- INICIO DE TRANSFORMACIÓN (T) ---
+
+--- Limpiando DataFrame "Animes" (Columnas: ['mal_id', 'titulo', 'tipo', 'episodios', 'annio', 'temporada', 'clasificacion', 'duracion', 'sinopsis', 
+'anime_rank']) ---
+Imputación 'annio': Nulos rellenados con '0' 
+Imputado 'tipo': Nulos rellenados con 'N/A'
+Imputado 'episodios': Nulos rellenados con '9999'
+Imputado 'temporada': Nulos rellenados con 'N/A'
+Imputado 'clasificacion': Nulos rellenados con 'N/A'
+Imputado 'sinopsis': Nulos rellenados con 'N/A'
+Imputado 'anime_rank': Nulos rellenados con '9999'
+
+--- Limpiando DataFrame "Generos" (Columnas: ['genero_id', 'nombre_genero']) ---
+
+--- Limpiando DataFrame "Estudio" (Columnas: ['mal_id', 'nombre_studio', 'favoritos', 'establecido']) ---
+Imputado 'establecido': Nulos (NaT) rellenados con '2261-12-31'
+
+--- Limpiando DataFrame "Popularidad" (Columnas: ['mal_id', 'score', 'scored_by', 'miembros', 'favoritos', 'popularidad']) ---
+Imputado 'score': Nulos rellenados con '9999'
+Imputado 'scored_by': Nulos rellenados con '9999'
+
+--- Limpiando DataFrame "Anime_Generos" (Columnas: ['mal_id', 'genero_id']) ---
+
+--- Limpiando DataFrame "Animes_Estudios" (Columnas: ['mal_id', 'studio_id']) ---
+
+--- INICIO DE CARGA (L) ---
+Cargando datos de tabla Animes (12500 filas)...
+Conexión exitosa a MySQL version:8.0.44
+Conectado a la base de datos
+Datos de la tabla animes insertados. Conteo final en DB: 12500
+Conexión cerrada
+Cargando datos de tabla Generos (78 filas)...
+Conexión exitosa a MySQL version:8.0.44
+Conectado a la base de datos
+Datos de la tabla genero insertados. Conteo final en DB: 78
+Conexión cerrada
+Cargando datos de tabla Estudios (2779 filas)...
+Conexión exitosa a MySQL version:8.0.44
+Conectado a la base de datos
+Datos de la tabla estudios insertados. Conteo final en DB: 2700
+Conexión cerrada
+Cargando datos de tabla Popularidad (12500 filas)...
+Conexión exitosa a MySQL version:8.0.44
+Conectado a la base de datos
+Datos de la tabla popularidad insertados. Conteo final en DB: 12500
+Conexión cerrada
+Cargando datos de tabla Animes_Generos (22397 filas)...
+Conexión exitosa a MySQL version:8.0.44
+Conectado a la base de datos
+Datos de la tabla anime_generos insertados. Conteo final en DB: 22397
+Conexión cerrada
+Cargando datos de tabla Animes_Estudios (10669 filas)...
+Conexión exitosa a MySQL version:8.0.44
+Conectado a la base de datos
+Datos de la tabla anime_estudios insertados. Conteo final en DB: 10669
+Conexión cerrada
+
+PIPELINE "ETL" COMPLETO
