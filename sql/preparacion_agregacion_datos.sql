@@ -181,8 +181,7 @@ GROUP BY
 ORDER BY
 	promedio_score DESC;
     
--- La consutla nos muestra el score promedio que han tendio en base a los animes producidos, en dicha consulta tambien aparecen estudios que no tiene 
--- un score posiblemente esto se deba a la falta de datos.
+-- La consutla nos muestra el score promedio que han tendio en base a los animes producidos.
 
 -- 2.-producción por año
 SELECT
