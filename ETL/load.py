@@ -25,8 +25,6 @@ def load_animes(df):
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             ON DUPLICATE KEY UPDATE
                 titulo = VALUES(titulo),
-                titulo_ingles = VALUES(titulo_ingles),
-                titulo_japones = VALUES(titulo_japones),
                 tipo = VALUES(tipo),
                 episodios = VALUES(episodios),
                 annio = VALUES(annio),
