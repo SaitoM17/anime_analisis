@@ -127,7 +127,7 @@ WITH rango AS(
 	INNER JOIN generos g
 		ON ag.genero_id = g.genero_id
 	WHERE 
-		annio >= 1960
+		annio > 0
 	GROUP BY
 		Rango_Decenal_Inicio,
         g.nombre_genero
