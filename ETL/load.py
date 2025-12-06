@@ -20,9 +20,9 @@ def load_animes(df):
 
             insert_query = """
             INSERT INTO animes(
-                mal_id, titulo, titulo_ingles, titulo_japones, tipo, episodios, annio, temporada, clasificacion, duracion, sinopsis, anime_rank
+                mal_id, titulo, tipo, episodios, annio, temporada, clasificacion, duracion, sinopsis, anime_rank
             )
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             ON DUPLICATE KEY UPDATE
                 titulo = VALUES(titulo),
                 titulo_ingles = VALUES(titulo_ingles),
