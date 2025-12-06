@@ -53,7 +53,10 @@ def carga_data(df_final):
 
     for df, fun_load, nombre_tabla in secuencia_carga:
         print(f'Cargando datos de tabla {nombre_tabla} ({df.shape[0]} filas)...')
-        fun_load(df)
+        conteo_final = fun_load(df)
+
+        if nombre_tabla in ['animes', 'generos', 'estudios', 'popularidad', 'anime_generos', 'anime_estudios']:
+            print(f'    -> Verificación MySQL: Tabla {nombre_tabla} contiene {conteo_final} registros únicos')
 
     print(f'\nPIPELINE "ETL" COMPLETO')
 
