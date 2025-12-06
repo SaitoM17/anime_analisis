@@ -194,6 +194,8 @@ INNER JOIN anime_estudios ae
 	ON a.mal_id = ae.mal_id
 INNER JOIN estudios e
 	ON ae.estudio_id = e.estudio_id
+WHERE
+	a.annio > 0
 GROUP BY
 	a.annio,
     e.nombre_estudio
