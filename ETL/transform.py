@@ -16,7 +16,7 @@ def imputar_df(lista_df: list[pd.DataFrame]) -> list[pd.DataFrame]:
             print(f"Imputado 'establecido': Nulos (NaT) rellenados con '{imputacion_fecha}'")
 
         if 'annio' in df.columns:
-            df['annio'] = df['annio'].fillna(2261)
+            df['annio'] = df['annio'].fillna(0)
             print(f"Imputación 'annio': Nulos rellenados con '2261' ")
 
         # Detectar valores nulos e imputarlos con 'N/A y '0
