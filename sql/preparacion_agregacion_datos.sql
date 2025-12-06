@@ -19,7 +19,7 @@ GROUP BY
 ORDER BY
 	annio DESC;
 
--- En los últimos años(20 años) el promedio de score por año es de 6, lo que nos puede dar a entender de que no todos los animes en ese esos años fueron bien recibidos.
+-- En los últimos años el promedio de score por año es de 6, lo que nos puede dar a entender de que no todos los animes en ese esos años fueron bien recibidos.
 
 -- 2.-Conocer la oferta de anime por año y temporada
 SELECT
