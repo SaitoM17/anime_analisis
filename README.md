@@ -34,10 +34,20 @@ El proyecto incluye un pipeline automatizado de extracción y limpieza de datos,
 
 El conjunto de datos utilizado contiene las siguientes columnas:
 
-- `NombreColumna1`: [Descripción]
-- `NombreColumna2`: [Descripción]
-- `NombreColumna3`: [Descripción]
-- `...`
+1.-Tabla animes:
+- `mal_id`: [Descripción]
+- `titulo`: [Descripción]
+- `tipo`: [Descripción]
+- `episodios`:
+- `annio`:
+- `temporada`:
+- `clasificacion`:
+- `duracion`:
+- `sinopsis`:
+- `anime_rank`:
+- ``
+- ``
+
 
 Fuente: [Nombre de la fuente o “datos simulados/ficticios”].
 
