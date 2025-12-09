@@ -50,11 +50,19 @@ El conjunto de datos utilizado contiene las siguientes columnas:
 - `genero_id`:
 - `nombre_genero`:
 
-3.-Tabla Estudios:
+3.-Tabla estudios:
 - `estudio_id`:
 - `nombre_estudio`:
 - `favoritos`:
 - `establecido`:
+
+4.-Tabla popularidad:
+- `mal_id`:
+- `score`:
+- `scored_by`:
+- `miembros`:
+- `favoritos`:
+- `popularidad`:
 
 Fuente: [Nombre de la fuente o “datos simulados/ficticios”].
 
