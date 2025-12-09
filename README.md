@@ -47,14 +47,14 @@ El conjunto de datos utilizado contiene las siguientes columnas:
 - `anime_rank`: Clasificación/Categoria
 
 2.-Tabla generos:
-- `genero_id`:
-- `nombre_genero`:
+- `genero_id`: ID MyAnimeList
+- `nombre_genero`: Nombre de genero
 
 3.-Tabla estudios:
-- `estudio_id`:
-- `nombre_estudio`:
-- `favoritos`:
-- `establecido`:
+- `estudio_id`: ID MyAnimeList
+- `nombre_estudio`: Nombre del estudio
+- `favoritos`: Los favoritos de los miembros de los prouctores
+- `establecido`: Fecha de establecimiento
 
 4.-Tabla popularidad:
 - `mal_id`:
