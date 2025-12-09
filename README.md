@@ -45,8 +45,10 @@ El conjunto de datos utilizado contiene las siguientes columnas:
 - `duracion`:
 - `sinopsis`:
 - `anime_rank`:
-- ``
-- ``
+
+2.-Tabla genero:
+- `genero_id`:
+- `nombre_genero`:
 
 
 Fuente: [Nombre de la fuente o “datos simulados/ficticios”].
