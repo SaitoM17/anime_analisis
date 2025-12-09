@@ -64,6 +64,10 @@ El conjunto de datos utilizado contiene las siguientes columnas:
 - `favoritos`:
 - `popularidad`:
 
+5.-Tabla anime_generos:
+- `mal_id`:
+- `genero_id`:
+
 Fuente: [Nombre de la fuente o “datos simulados/ficticios”].
 
 ---
