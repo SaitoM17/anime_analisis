@@ -68,6 +68,10 @@ El conjunto de datos utilizado contiene las siguientes columnas:
 - `mal_id`:
 - `genero_id`:
 
+6.-Tabla anime_estudios:
+- `mal_id`:
+- `estudio_id`:
+
 Fuente: [Nombre de la fuente o “datos simulados/ficticios”].
 
 ---
