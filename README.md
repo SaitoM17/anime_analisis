@@ -65,12 +65,12 @@ El conjunto de datos utilizado contiene las siguientes columnas:
 - `popularidad`: Popularidad
 
 5.-Tabla anime_generos:
-- `mal_id`:
-- `genero_id`:
+- `mal_id`: ID MyAnimeList 
+- `genero_id`: genero_id
 
 6.-Tabla anime_estudios:
-- `mal_id`:
-- `estudio_id`:
+- `mal_id`: ID MyAnimeList
+- `estudio_id`: estudio_id
 
 Fuente: [Nombre de la fuente o “datos simulados/ficticios”].
 
