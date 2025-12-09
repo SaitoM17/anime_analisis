@@ -57,12 +57,12 @@ El conjunto de datos utilizado contiene las siguientes columnas:
 - `establecido`: Fecha de establecimiento
 
 4.-Tabla popularidad:
-- `mal_id`:
-- `score`:
-- `scored_by`:
-- `miembros`:
-- `favoritos`:
-- `popularidad`:
+- `mal_id`: ID MyAnimeList 
+- `score`: Puntaje
+- `scored_by`: Número de usuarios
+- `miembros`: Número de usuarios que han añadido esta entrada a su lista
+- `favoritos`: Número de usuarios que han marcado esta entrada como favorita
+- `popularidad`: Popularidad
 
 5.-Tabla anime_generos:
 - `mal_id`:
