@@ -35,16 +35,16 @@ El proyecto incluye un pipeline automatizado de extracción y limpieza de datos,
 El conjunto de datos utilizado contiene las siguientes columnas:
 
 1.-Tabla animes:
-- `mal_id`: [Descripción]
-- `titulo`: [Descripción]
-- `tipo`: [Descripción]
-- `episodios`:
-- `annio`:
-- `temporada`:
-- `clasificacion`:
-- `duracion`:
-- `sinopsis`:
-- `anime_rank`:
+- `mal_id`: ID de MyAnimeList
+- `titulo`: Título del anime
+- `tipo`: Tipo de anime ("TV","OVA","Movie","Special","ONA","Music")
+- `episodios`: Número de episodios
+- `annio`: Año
+- `temporada`: Temporada (Enum,"summer","winter","spring","fall")
+- `clasificacion`: Clasificación de audiencia de anime ("G - All Ages""PG - Children","PG-13 - Teens 13 or older","R - 17+ (violence & profanity)","R+ - Mild Nudity","Rx - Hentai")
+- `duracion`: Duración bruta analizada
+- `sinopsis`: Sinopsis
+- `anime_rank`: Clasificación/Categoria
 
 2.-Tabla generos:
 - `genero_id`:
