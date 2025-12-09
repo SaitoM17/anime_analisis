@@ -72,7 +72,7 @@ El conjunto de datos utilizado contiene las siguientes columnas:
 - `mal_id`: ID MyAnimeList
 - `estudio_id`: estudio_id
 
-Fuente: [Nombre de la fuente o “datos simulados/ficticios”].
+Fuente: [Jikan API](https://jikan.moe/).
 
 ---
 
