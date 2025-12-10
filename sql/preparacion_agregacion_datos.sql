@@ -141,7 +141,7 @@ RankedGenres AS (
             PARTITION BY 
                 Rango_Decenal_Inicio
             ORDER BY 
-                Total_Animes_Por_Genero DESC -- Ordena por el conteo (mayor a menor) para el top
+                total_animes_por_genero DESC -- Ordena por el conteo (mayor a menor) para el top
         ) AS rank_por_decada
     FROM
         rango
