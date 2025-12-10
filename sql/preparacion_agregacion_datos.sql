@@ -159,6 +159,48 @@ ORDER BY
     Conteo DESC;
     
 -- La consulta nos muestra que el genero de comedia es el que más aparace en lo largo de las decadas, esto nos dice que el mayoria de los animes contiene el genero de comedia.
+-- 3.-Difernecia animes con rating sobresaliente de uno promedio
+WITH AnimeCategorizado AS (
+    SELECT
+        a.mal_id,
+        a.tipo,
+        a.episodios,
+        p.score,
+        p.scored_by,
+        p.popularidad as popularidad,
+        -- Categorización (Ajusta los umbrales según tu criterio, e.g., Sobresaliente > 8.5)
+        CASE
+            WHEN p.score >= 8.5 THEN 'Sobresaliente'
+            WHEN p.score >= 6.0 AND p.score < 8.5 THEN 'Promedio'
+            ELSE 'Bajo'
+        END AS Categoria_Rating
+    FROM
+        animes a
+    INNER JOIN popularidad p ON a.mal_id = p.mal_id
+    WHERE
+        p.score < 9999 -- Excluir imputados
+	AND
+		a.episodios < 9999
+	AND
+		p.scored_by < 9999
+	AND
+		a.tipo != 'N/A'
+)
+SELECT
+    Categoria_Rating,
+    ROUND(AVG(score), 1) AS Avg_score,
+    ROUND(AVG(episodios), 1) AS Avg_Episodios,
+    ROUND(AVG(scored_by), 0) AS Avg_Votos,
+    ROUND(AVG(popularidad), 0) AS Avg_Popularidad_Rank,
+    COUNT(mal_id) AS Total_Animes
+FROM
+    AnimeCategorizado
+GROUP BY
+    Categoria_Rating
+ORDER BY
+    Categoria_Rating DESC;
+
+-- Nos dio como resulta que no hay animes sobresalientes, esto puede deverse a que se tasn excluyendo valopres imputados o la falta de datos más recientes.
 
 -- # Desempeño de estudios
 
