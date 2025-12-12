@@ -274,8 +274,14 @@ Se implemento `ON DUPLICATE KEY UPDATE` en las tablas para asegurar quie solo se
 
 El proceso de ETL fue orquestado por medio de un pipeline con la finalidad de automatizar el proceso de extracción de datos, transformarlos y cargalos a la base de datos.
 
-### 2. **Exploración inicial de datos(verificación y preparación/agregación de datos)**
+### 2. **Exploración inicial de datos(validación de la calidad y preparación de los datos)**
+En esta exploración inicial se ejecutaron diversas consultas de las las cuales se obtubieron estos puntos:
+* El score promedio general por año se mantiene consistentemente alrededor de 6.0 a 7.0, indicando que la mayoría de los títulos se sitúan en el rango "bueno" o aceptable", sin una inundación masiva de títulos sobresalientes.
+* Las series de tiempo recientes (producción por año y géneros top) muestran una caída drástica en el volumen a partir de la última década, lo que es una fuerte señal de una cobertura incompleta de datos recientes de la API.
+* Los géneros con mejor rendimiento en score no son los más comunes. Suspense y Award Winning lideran la calidad, mientras que la Comedia se mantiene como el género dominante en volumen de producción a lo largo de las décadas.
+* Se ha establecido un ranking inicial de estudios por calidad promedio, identificando diferencias en el desempeño (alto score) y el volumen de producción.
 
+En esta exploación tambien se verifico la imputación de los datos de los cuales se logro confirmar que se imputaron correctamente y no representan un problema a futuro(solo recordad excluirlos durante el proceso de análisis), la cantidad de información que se cargo durante el proceso de ETL concuerda con la información que se tiene en la base de datos actualmente.
 
 ### 3. **Análisis exploratorio de datos (EDA)**
    - [Ej. Distribución, correlaciones, agrupaciones, etc.]
