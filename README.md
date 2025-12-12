@@ -284,8 +284,12 @@ En esta exploración inicial se ejecutaron diversas consultas de las las cuales 
 En esta exploación tambien se verifico la imputación de los datos de los cuales se logro confirmar que se imputaron correctamente y no representan un problema a futuro(solo recordad excluirlos durante el proceso de análisis), la cantidad de información que se cargo durante el proceso de ETL concuerda con la información que se tiene en la base de datos actualmente.
 
 ### 3. **Análisis exploratorio de datos (EDA)**
-   - [Ej. Distribución, correlaciones, agrupaciones, etc.]
+#### **1.- Tendencias de centrales**
+##### **Evolución del Rating Promedio**
+La calificación promedio (score) de los animes, si bien muestra picos ascendentes y descendentes, se ha mantenido históricamente por encima de 6.5. La estabilidad de este score sugiere que la percepción general de la calidad ha sido consistente.
 
+Nota Metodológica: Se observa una caída del promedio hasta 5.88 en los años más recientes. Esta disminución es atribuible a la incompletitud de los datos extraídos de la API, lo que sesga la muestra reciente y no refleja necesariamente una caída real de la calidad de la industria. [Gráfica 1: Evolución del Score Promedio por Año]
+![imagen1](reports/figures/evolucion_calificacion_promedio_desde_2000_hasta_hoy.png)
 ---
 
 ## 📌 Vista previa del Dashboard
