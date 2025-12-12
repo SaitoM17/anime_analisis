@@ -322,12 +322,99 @@ Para determinar qué diferencia a un anime sobresaliente ($\geq 8.5$ de score) d
 
 La calidad sobresaliente está indisociablemente ligada a la popularidad masiva. Los animes de élite no solo reciben scores altos, sino que se convierten en fenómenos culturales consumidos por una audiencia seis veces mayor que el promedio. El bajo ranking de popularidad (446) confirma su estatus de seguimiento masivo.
 
-##### **3.- Estudios de animación**
+#### **3.- Estudios de animación**
+##### **Ranking de Estudios y Calidad**
 El análisis del desempeño de los estudios de animación por score promedio revela una clara jerarquía de calidad. Los 10 estudios principales producen animes con scores promedio superiores a 7.0.
 
 Top 3 Estudios por Score Promedio: Egg Firm (8.41), Marvy Jack (8.30) y Shuka (8.16).
 
 ![imagen5](reports/figures/estudios_producen_animes_mejor_valorados.png)
+
+#### **4.- Producción**
+
+La duración de la unidad (episodio o película) tiene una correlación débilmente positiva con el score.
+
+* ##### **Relación Duración-Rating**
+   Duración Estándar: La duración por episodio más común es de 24 minutos. Este clúster concentra la mayor cantidad de ratings, demostrando que la duración estándar no es un predictor de la calidad.
+   <table border="1" class="dataframe">
+   <thead>
+      <tr style="text-align: right;">
+         <th></th>
+         <th>titulo</th>
+         <th>duracion</th>
+         <th>episodios</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <th>0</th>
+         <td>.hack//Roots</td>
+         <td>24 min per ep</td>
+         <td>26</td>
+      </tr>
+      <tr>
+         <th>1</th>
+         <td>.hack//Sign</td>
+         <td>24 min per ep</td>
+         <td>26</td>
+      </tr>
+      <tr>
+         <th>2</th>
+         <td>.hack//Tasogare no Udewa Densetsu</td>
+         <td>23 min per ep</td>
+         <td>12</td>
+      </tr>
+      <tr>
+         <th>3</th>
+         <td>009-1</td>
+         <td>24 min per ep</td>
+         <td>12</td>
+      </tr>
+      <tr>
+         <th>4</th>
+         <td>07-Ghost</td>
+         <td>23 min per ep</td>
+         <td>25</td>
+      </tr>
+      <tr>
+         <th>...</th>
+         <td>...</td>
+         <td>...</td>
+         <td>...</td>
+      </tr>
+      <tr>
+         <th>2664</th>
+         <td>iDOLM@STER Xenoglossia</td>
+         <td>23 min per ep</td>
+         <td>26</td>
+      </tr>
+      <tr>
+         <th>2665</th>
+         <td>s.CRY.ed</td>
+         <td>24 min per ep</td>
+         <td>26</td>
+      </tr>
+      <tr>
+         <th>2666</th>
+         <td>xxxHOLiC</td>
+         <td>24 min per ep</td>
+         <td>24</td>
+      </tr>
+      <tr>
+         <th>2667</th>
+         <td>xxxHOLiC◆Kei</td>
+         <td>24 min per ep</td>
+         <td>13</td>
+      </tr>
+      <tr>
+         <th>2668</th>
+         <td>ēlDLIVE</td>
+         <td>24 min per ep</td>
+         <td>12</td>
+      </tr>
+   </tbody>
+   </table>
+
 
 ---
 
