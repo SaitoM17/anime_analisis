@@ -272,6 +272,8 @@ La cargas se realizo en el ambiente de MySQL con una secuencia de ejecución pla
 
 Se implemento `ON DUPLICATE KEY UPDATE` en las tablas para asegurar quie solo se almacenaran registros únicos basados en mal_id.
 
+El proceso de ETL fue orquestado por medio de un pipeline con la finalidad de automatizar el proceso de extracción de datos, transformarlos y cargalos a la base de datos.
+
 ### 2. **Exploración inicial de datos(verificación y preparación/agregación de datos)**
 
 
