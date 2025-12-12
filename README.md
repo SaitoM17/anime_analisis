@@ -83,7 +83,7 @@ Fuente: [Jikan API](https://jikan.moe/).
 ##### 1.1 Extracción
 La estracción se realizó a través de un script iterativo que recorrió 500 páginas del endpoint https://api.jikan.moe/v4/ de la Jikan API. La información se descompuso en las seis tablas relacionales finales(Animes, Popularidad, Géneros, Estudios, Anime_Generos y Animes_Estudios).
 
-Ejemplo de código usado para la extracción de datos:
+<!-- Ejemplo de código usado para la extracción de datos:
 ```Python
 def extraccion_anime(num_paginas):
     anime_dic = {
@@ -149,7 +149,7 @@ def extraccion_anime(num_paginas):
             print(f'Error de conexión: {e}')
 
     return anime_dic
-```
+``` -->
 
 ### 2. **Exploración inicial de datos(verificación y preparación/agregación de datos)**
 ##### **2.1 Transformación**
@@ -163,8 +163,8 @@ Durante la fase de transformación se centro en la limpieza y la estandarizació
 | `Fecha (DateTime)`      | establecido (Estudios) | `'2261-12-31'` |Valor futuro para marcar estudios sin fecha de fundación conocida.|
 
 
-Código usado para la transformación de datos:
-```Python
+<!-- Código usado para la transformación de datos: -->
+<!-- ```Python
 def imputar_df(lista_df: list[pd.DataFrame]) -> list[pd.DataFrame]:
 
     lista_df_limpios = []
@@ -260,7 +260,7 @@ def cambio_tipo_dato(lista_df):
     lista_df_tipo_correcto.append(tabla_anime_estudio)
 
     return lista_df_tipo_correcto
-```
+``` -->
 
 ### 3. **Análisis exploratorio de datos (EDA)**
    - [Ej. Distribución, correlaciones, agrupaciones, etc.]
