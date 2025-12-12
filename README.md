@@ -14,6 +14,7 @@ El proyecto incluye un pipeline automatizado de extracción y limpieza de datos,
 - [🎯 Propósito](#-propósito)
 - [📦 Conjunto de Datos](#-conjunto-de-datos)
 - [🧪 Desarrollo del Proyecto](#-desarrollo-del-proyecto)
+- [📌 Vista previa del Dashboard](#-vista-previa-del-dashboard)
 - [💡 Insights claves](#-insights-claves)
 - [🛠️ Tecnologías](#️-tecnologías)
 - [⚙️ Instalación](#️-instalación)
@@ -84,6 +85,10 @@ Fuente: [Jikan API](https://jikan.moe/).
 
 ### 3. **Análisis exploratorio de datos (EDA)**
    - [Ej. Distribución, correlaciones, agrupaciones, etc.]
+
+---
+
+## 📌 Vista previa del Dashboard
 
 ---
 
