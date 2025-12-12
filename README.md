@@ -80,6 +80,76 @@ Fuente: [Jikan API](https://jikan.moe/).
 ## 🧪 Desarrollo del Proyecto
 
 ### 1. **ETL(Extracción, Transformación y Carga)**
+##### 1.1 Extracción
+La estracción se realizó a través de un script iterativo que recorrió 500 páginas del endpoint https://api.jikan.moe/v4/ de la Jikan API. La información se descompuso en las seis tablas relacionales finales(Animes, Popularidad, Géneros, Estudios, Anime_Generos y Animes_Estudios).
+
+Ejemplo de código usado para la extracción de datos:
+```Python
+def extraccion_anime(num_paginas):
+    anime_dic = {
+        'mal_id': [],
+        'titulo': [],
+        'tipo': [],
+        'episodios': [],
+        'annio': [],
+        'temporada': [],
+        'clasificacion': [],
+        'duracion': [],
+        'sinopsis': [],
+        'anime_rank': []
+    }
+
+    for pagina in range(1,num_paginas+1):
+        url = f'https://api.jikan.moe/v4/anime?page={pagina}'
+
+        try:
+            response = requests.get(url)
+
+            time.sleep(0.5)
+            
+            if response.status_code == 200:
+                print('Petición exitosa')
+                data = response.json()
+                lista_data = data.get('data',[])
+                
+                for anime in lista_data:
+                    lista_titulos = anime.get('titles')
+
+                    if lista_titulos:
+                        for titulo in lista_titulos:
+                            titulo_ = titulo.get('title')
+                            break
+                    
+                    mal_id = anime.get('mal_id')
+                    tipo = anime.get('type')
+                    episodios = anime.get('episodes')
+                    annio = anime.get('year')
+                    season = anime.get('season')
+                    rating = anime.get('rating')
+                    duracion = anime.get('duration')
+                    synopsis = anime.get('synopsis')
+                    rank_anime = anime.get('rank')
+
+                    anime_dic['mal_id'].append(mal_id)
+                    anime_dic['titulo'].append(titulo_)
+                    anime_dic['tipo'].append(tipo)
+                    anime_dic['episodios'].append(episodios)
+                    anime_dic['annio'].append(annio)
+                    anime_dic['temporada'].append(season)
+                    anime_dic['clasificacion'].append(rating)
+                    anime_dic['duracion'].append(duracion)
+                    anime_dic['sinopsis'].append(synopsis)
+                    anime_dic['anime_rank'].append(rank_anime)
+        
+            else:
+                print(f'Error en la petición \nEstado: {response.status_code}')
+                print(response.text)
+
+        except requests.exceptions.RequestException as e:
+            print(f'Error de conexión: {e}')
+
+    return anime_dic
+```
 
 ### 2. **Exploración inicial de datos(verificación y preparación/agregación de datos)**
 
