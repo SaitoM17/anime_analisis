@@ -78,23 +78,12 @@ Fuente: [Jikan API](https://jikan.moe/).
 
 ## 🧪 Desarrollo del Proyecto
 
-1. **Carga y exploración inicial de los datos**:
-   - Exploración básica con `.head()`, `.info()`, `.describe()`, etc.
+### 1. **ETL(Extracción, Transformación y Carga)**
 
-2. **Limpieza y preprocesamiento**:
-   - Manejo de valores nulos, duplicados, formatos y conversiones de fechas.
+### 2. **Exploración inicial de datos(verificación y preparación/agregación de datos)**
 
-3. **Análisis exploratorio de datos (EDA)**:
+### 3. **Análisis exploratorio de datos (EDA)**
    - [Ej. Distribución, correlaciones, agrupaciones, etc.]
-
-4. **Visualización de datos**:
-   - Uso de gráficos de barras, líneas, cajas, dispersión y mapas de calor.
-
-5. **Modelado o reportes (opcional)**:
-   - [Si aplica: modelos de ML, clustering, predicciones, etc.]
-
-6. **Conclusiones y recomendaciones**:
-   - Síntesis de hallazgos clave y propuestas de acción.
 
 ---
 
