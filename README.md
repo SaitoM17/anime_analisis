@@ -481,6 +481,11 @@ La duración de la unidad (episodio o película) tiene una correlación débilme
 
    ![imagen6](reports/figures/relacion_minutos_score_anime.png)
 
+#### **5.-Estacionalidad**
+##### **Patrones de Estreno**
+No existe un patrón fuerte en los ratings que favorezca consistentemente a una temporada sobre las otras. La calidad media (mediana) y la dispersión (outliers) de los scores son similares entre Spring, Summer, Fall y Winter. La calidad es, por lo tanto, más dependiente del estudio y el equipo de producción que del mes de estreno. 
+
+![imagen7](reports/figures/patrones_ratings_segun_temporada.png)
 
 ---
 
