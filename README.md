@@ -504,11 +504,14 @@ No existe un patrón fuerte en los ratings que favorezca consistentemente a una 
 ## 🛠️ Tecnologías
 
 - Python
-- Pandas
-- Matplotlib
-- Seaborn
-- Jupyter Notebook / Google Colab
-- [Otras herramientas que uses, como Scikit-learn, Plotly, etc.]
+   - Pandas
+   - Matplotlib
+   - Seaborn
+   - Numpy
+   - mysql-connector-python
+   - requests
+- Jupyter Notebook
+- Power BI
 
 ---
 
