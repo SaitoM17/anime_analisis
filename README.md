@@ -292,7 +292,7 @@ Nota Metodológica: Se observa una caída del promedio hasta 5.88 en los años m
 
 ![imagen1](reports/figures/evolucion_calificacion_promedio_desde_2000_hasta_hoy.png)
 
-2. Oferta Histórica por Temporada
+##### **Oferta Histórica por Temporada**
 La oferta de anime experimentó un crecimiento constante y significativo desde el año 2000, con la mayoría de las temporadas alcanzando su máximo volumen de estrenos entre 2015 y 2016 (ej., 69 animes lanzados en Spring 2016).
 
 Sin embargo, a partir de 2017, el conteo de animes por temporada disminuyó drásticamente. Es imperativo señalar que esta caída es una limitación en la cobertura de datos de la API en el periodo reciente y no representa una reducción en la producción real de la industria.
@@ -300,6 +300,16 @@ Sin embargo, a partir de 2017, el conteo de animes por temporada disminuyó drá
 Temporada Dominante: La temporada de Spring (Primavera) concentra históricamente el mayor volumen de títulos estrenados, lo que indica una preferencia de los estudios por este periodo. 
 
 ![imagen2](reports/figures/oferta_anime_annio_por_temporada_desde_2000.png)
+
+#### **2.- Calidad y popularidad**
+##### **El Factor Género en el Rating**
+El análisis de género revela que los nichos narrativos suelen tener los scores promedio más altos, aunque no son los más comunes.
+
+* El género Suspense lidera el ranking de calidad con un score promedio de 7.37, seguido por Mystery y Avant Garde.
+* El género Comedy se posiciona como el género más dominante en volumen de producción en todas las décadas analizadas.
+
+![imagen3](reports/figures/generos_mejor_promedio_score.png)
+![imagen4](reports/figures/generos_anime_por_decada.png)
 
 ---
 
