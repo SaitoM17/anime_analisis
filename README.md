@@ -288,8 +288,19 @@ En esta exploación tambien se verifico la imputación de los datos de los cuale
 ##### **Evolución del Rating Promedio**
 La calificación promedio (score) de los animes, si bien muestra picos ascendentes y descendentes, se ha mantenido históricamente por encima de 6.5. La estabilidad de este score sugiere que la percepción general de la calidad ha sido consistente.
 
-Nota Metodológica: Se observa una caída del promedio hasta 5.88 en los años más recientes. Esta disminución es atribuible a la incompletitud de los datos extraídos de la API, lo que sesga la muestra reciente y no refleja necesariamente una caída real de la calidad de la industria. [Gráfica 1: Evolución del Score Promedio por Año]
+Nota Metodológica: Se observa una caída del promedio hasta 5.88 en los años más recientes. Esta disminución es atribuible a la incompletitud de los datos extraídos de la API, lo que sesga la muestra reciente y no refleja necesariamente una caída real de la calidad de la industria.
+
 ![imagen1](reports/figures/evolucion_calificacion_promedio_desde_2000_hasta_hoy.png)
+
+2. Oferta Histórica por Temporada
+La oferta de anime experimentó un crecimiento constante y significativo desde el año 2000, con la mayoría de las temporadas alcanzando su máximo volumen de estrenos entre 2015 y 2016 (ej., 69 animes lanzados en Spring 2016).
+
+Sin embargo, a partir de 2017, el conteo de animes por temporada disminuyó drásticamente. Es imperativo señalar que esta caída es una limitación en la cobertura de datos de la API en el periodo reciente y no representa una reducción en la producción real de la industria.
+
+Temporada Dominante: La temporada de Spring (Primavera) concentra históricamente el mayor volumen de títulos estrenados, lo que indica una preferencia de los estudios por este periodo. 
+
+![imagen2](reports/figures/oferta_anime_annio_por_temporada_desde_2000.png)
+
 ---
 
 ## 📌 Vista previa del Dashboard
