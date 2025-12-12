@@ -284,7 +284,7 @@ En esta exploración inicial se ejecutaron diversas consultas de las las cuales 
 En esta exploación tambien se verifico la imputación de los datos de los cuales se logro confirmar que se imputaron correctamente y no representan un problema a futuro(solo recordad excluirlos durante el proceso de análisis), la cantidad de información que se cargo durante el proceso de ETL concuerda con la información que se tiene en la base de datos actualmente.
 
 ### 3. **Análisis exploratorio de datos (EDA)**
-#### **1.- Tendencias de centrales**
+#### **3.1.- Tendencias de centrales**
 ##### **Evolución del Rating Promedio**
 La calificación promedio (score) de los animes, si bien muestra picos ascendentes y descendentes, se ha mantenido históricamente por encima de 6.5. La estabilidad de este score sugiere que la percepción general de la calidad ha sido consistente.
 
@@ -301,7 +301,7 @@ Temporada Dominante: La temporada de Spring (Primavera) concentra históricament
 
 ![imagen2](reports/figures/oferta_anime_annio_por_temporada_desde_2000.png)
 
-#### **2.- Calidad y popularidad**
+#### **3.2.- Calidad y popularidad**
 ##### **El Factor Género en el Rating**
 El análisis de género revela que los nichos narrativos suelen tener los scores promedio más altos, aunque no son los más comunes.
 
@@ -322,7 +322,7 @@ Para determinar qué diferencia a un anime sobresaliente ($\geq 8.5$ de score) d
 
 La calidad sobresaliente está indisociablemente ligada a la popularidad masiva. Los animes de élite no solo reciben scores altos, sino que se convierten en fenómenos culturales consumidos por una audiencia seis veces mayor que el promedio. El bajo ranking de popularidad (446) confirma su estatus de seguimiento masivo.
 
-#### **3.- Estudios de animación**
+#### **3.3.- Estudios de animación**
 ##### **Ranking de Estudios y Calidad**
 El análisis del desempeño de los estudios de animación por score promedio revela una clara jerarquía de calidad. Los 10 estudios principales producen animes con scores promedio superiores a 7.0.
 
@@ -330,7 +330,7 @@ Top 3 Estudios por Score Promedio: Egg Firm (8.41), Marvy Jack (8.30) y Shuka (8
 
 ![imagen5](reports/figures/estudios_producen_animes_mejor_valorados.png)
 
-#### **4.- Producción**
+#### **3.4.- Producción**
 
 La duración de la unidad (episodio o película) tiene una correlación débilmente positiva con el score.
 
@@ -481,7 +481,7 @@ La duración de la unidad (episodio o película) tiene una correlación débilme
 
    ![imagen6](reports/figures/relacion_minutos_score_anime.png)
 
-#### **5.-Estacionalidad**
+#### **3.5.-Estacionalidad**
 ##### **Patrones de Estreno**
 No existe un patrón fuerte en los ratings que favorezca consistentemente a una temporada sobre las otras. La calidad media (mediana) y la dispersión (outliers) de los scores son similares entre Spring, Summer, Fall y Winter. La calidad es, por lo tanto, más dependiente del estudio y el equipo de producción que del mes de estreno. 
 
