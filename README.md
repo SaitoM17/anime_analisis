@@ -311,6 +311,17 @@ El análisis de género revela que los nichos narrativos suelen tener los scores
 ![imagen3](reports/figures/generos_mejor_promedio_score.png)
 ![imagen4](reports/figures/generos_anime_por_decada.png)
 
+##### ** Distinción entre Anime Sobresaliente y Promedio**
+Para determinar qué diferencia a un anime sobresaliente ($\geq 8.5$ de score) de uno promedio ($6.0$ a $< 8.5$), se compararon las métricas de popularidad:
+
+| Categoria | Total_Animes | Avg_Episodios|Avg_Votos|Avg_Popularidad|
+| :-------- | :----------- | :----------- |:--------|:--------------|
+| `Bajo`    | 335          | 27.0         |11950.0  | 9869.0        |
+| `Promedio` | 2089        | 26.0         |109920.0 | 3939.0        |
+|`Sobresaliente` | 44      | 32.0         |704559.0 | 446.0         |
+
+La calidad sobresaliente está indisociablemente ligada a la popularidad masiva. Los animes de élite no solo reciben scores altos, sino que se convierten en fenómenos culturales consumidos por una audiencia seis veces mayor que el promedio. El bajo ranking de popularidad (446) confirma su estatus de seguimiento masivo.
+
 ---
 
 ## 📌 Vista previa del Dashboard
