@@ -311,7 +311,7 @@ El análisis de género revela que los nichos narrativos suelen tener los scores
 ![imagen3](reports/figures/generos_mejor_promedio_score.png)
 ![imagen4](reports/figures/generos_anime_por_decada.png)
 
-##### ** Distinción entre Anime Sobresaliente y Promedio**
+##### **Distinción entre Anime Sobresaliente y Promedio**
 Para determinar qué diferencia a un anime sobresaliente ($\geq 8.5$ de score) de uno promedio ($6.0$ a $< 8.5$), se compararon las métricas de popularidad:
 
 | Categoria | Total_Animes | Avg_Episodios|Avg_Votos|Avg_Popularidad|
@@ -334,8 +334,8 @@ Top 3 Estudios por Score Promedio: Egg Firm (8.41), Marvy Jack (8.30) y Shuka (8
 
 La duración de la unidad (episodio o película) tiene una correlación débilmente positiva con el score.
 
-* ##### **Relación Duración-Rating**
-   Duración Estándar: La duración por episodio más común es de 24 minutos. Este clúster concentra la mayor cantidad de ratings, demostrando que la duración estándar no es un predictor de la calidad.
+##### **Relación Duración-Rating**
+* **Duración Estándar:** La duración por episodio más común es de 24 minutos. Este clúster concentra la mayor cantidad de ratings, demostrando que la duración estándar no es un predictor de la calidad.
    <table border="1" class="dataframe">
    <thead>
       <tr style="text-align: right;">
@@ -376,12 +376,12 @@ La duración de la unidad (episodio o película) tiene una correlación débilme
          <td>23 min per ep</td>
          <td>25</td>
       </tr>
-      <tr>
+      <!-- <tr>
          <th>...</th>
          <td>...</td>
          <td>...</td>
          <td>...</td>
-      </tr>
+      </tr> -->
       <tr>
          <th>2664</th>
          <td>iDOLM@STER Xenoglossia</td>
@@ -414,6 +414,72 @@ La duración de la unidad (episodio o película) tiene una correlación débilme
       </tr>
    </tbody>
    </table>
+
+   <table border="1" class="dataframe">
+   <thead>
+      <tr style="text-align: right;">
+         <th></th>
+         <th>duracion</th>
+         <th>mal_id</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <th>18</th>
+         <td>24 min per ep</td>
+         <td>1050</td>
+      </tr>
+      <tr>
+         <th>17</th>
+         <td>23 min per ep</td>
+         <td>635</td>
+      </tr>
+      <tr>
+         <th>19</th>
+         <td>25 min per ep</td>
+         <td>214</td>
+      </tr>
+      <tr>
+         <th>23</th>
+         <td>3 min per ep</td>
+         <td>120</td>
+      </tr>
+      <tr>
+         <th>33</th>
+         <td>5 min per ep</td>
+         <td>100</td>
+      </tr>
+      <tr>
+         <th>16</th>
+         <td>22 min per ep</td>
+         <td>97</td>
+      </tr>
+      <tr>
+         <th>12</th>
+         <td>2 min per ep</td>
+         <td>73</td>
+      </tr>
+      <tr>
+         <th>27</th>
+         <td>4 min per ep</td>
+         <td>55</td>
+      </tr>
+      <tr>
+         <th>0</th>
+         <td>1 min per ep</td>
+         <td>47</td>
+      </tr>
+      <tr>
+         <th>3</th>
+         <td>12 min per ep</td>
+         <td>31</td>
+      </tr>
+   </tbody>
+   </table>
+
+* **Tendencia:** La línea de regresión muestra una ligera elevación en el rango de 50 a 120 minutos, indicando que las unidades más largas (Películas, OVAs) tienden a tener scores marginalmente más altos. Esto probablemente se deba al mayor presupuesto y valor de producción por unidad de tiempo inherente a estos formatos. 
+
+   ![imagen6](reports/figures/relacion_minutos_score_anime.png)
 
 
 ---
