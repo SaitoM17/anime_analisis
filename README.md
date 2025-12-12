@@ -322,6 +322,13 @@ Para determinar qué diferencia a un anime sobresaliente ($\geq 8.5$ de score) d
 
 La calidad sobresaliente está indisociablemente ligada a la popularidad masiva. Los animes de élite no solo reciben scores altos, sino que se convierten en fenómenos culturales consumidos por una audiencia seis veces mayor que el promedio. El bajo ranking de popularidad (446) confirma su estatus de seguimiento masivo.
 
+##### **3.- Estudios de animación**
+El análisis del desempeño de los estudios de animación por score promedio revela una clara jerarquía de calidad. Los 10 estudios principales producen animes con scores promedio superiores a 7.0.
+
+Top 3 Estudios por Score Promedio: Egg Firm (8.41), Marvy Jack (8.30) y Shuka (8.16).
+
+![imagen5](reports/figures/estudios_producen_animes_mejor_valorados.png)
+
 ---
 
 ## 📌 Vista previa del Dashboard
