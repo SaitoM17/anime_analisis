@@ -261,6 +261,17 @@ def cambio_tipo_dato(lista_df):
     return lista_df_tipo_correcto
 ``` -->
 
+##### **1.3 Carga**
+Preveio a la carga de información, se creo la base de datos junto con las tablas y las relaciones necesarias asegurando un almacen organizada de información relacionada para facilitar su gestión, acceso y actualizaciones.
+
+La cargas se realizo en el ambiente de MySQL con una secuencia de ejecución planificada y validada de integridad:
+
+1. Tabla padre principal: Animes
+2. Tablas padres: Generos y Estudios
+3. Tablas Hijos: Popularidad, Anime_Generos y Anime_Estudios
+
+Se implemento `ON DUPLICATE KEY UPDATE` en las tablas para asegurar quie solo se almacenaran registros únicos basados en mal_id.
+
 ### 2. **Exploración inicial de datos(verificación y preparación/agregación de datos)**
 
 
