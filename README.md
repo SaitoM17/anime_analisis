@@ -80,7 +80,7 @@ Fuente: [Jikan API](https://jikan.moe/).
 ## 🧪 Desarrollo del Proyecto
 
 ### 1. **ETL(Extracción, Transformación y Carga)**
-##### 1.1 Extracción
+##### **1.1 Extracción**
 La estracción se realizó a través de un script iterativo que recorrió 500 páginas del endpoint https://api.jikan.moe/v4/ de la Jikan API. La información se descompuso en las seis tablas relacionales finales(Animes, Popularidad, Géneros, Estudios, Anime_Generos y Animes_Estudios).
 
 <!-- Ejemplo de código usado para la extracción de datos:
@@ -151,8 +151,7 @@ def extraccion_anime(num_paginas):
     return anime_dic
 ``` -->
 
-### 2. **Exploración inicial de datos(verificación y preparación/agregación de datos)**
-##### **2.1 Transformación**
+##### **1.2 Transformación**
 Durante la fase de transformación se centro en la limpieza y la estandarización de los datos. Se utilizaron valores centinela estratégicos para la imputación de nulos, permitiendo su fácil exclusión o análisis durante el modelado posterior:
 
 | Tipo de dato | Columna afectada| Valor centinela | Propósito analítico|
@@ -261,6 +260,9 @@ def cambio_tipo_dato(lista_df):
 
     return lista_df_tipo_correcto
 ``` -->
+
+### 2. **Exploración inicial de datos(verificación y preparación/agregación de datos)**
+
 
 ### 3. **Análisis exploratorio de datos (EDA)**
    - [Ej. Distribución, correlaciones, agrupaciones, etc.]
