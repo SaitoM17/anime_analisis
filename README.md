@@ -523,7 +523,7 @@ Contrario a la creencia popular, la temporada de estreno no garantiza un mejor r
    - mysql-connector-python
    - requests
 - Jupyter Notebook
-- Power BI
+- MySQL Workbeach 8.0 CE
 
 ---
 
