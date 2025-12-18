@@ -13,8 +13,7 @@ El proyecto incluye un pipeline automatizado de extracción y limpieza de datos,
 
 - [🎯 Propósito](#-propósito)
 - [📦 Conjunto de Datos](#-conjunto-de-datos)
-- [🧪 Desarrollo del Proyecto](#-desarrollo-del-proyecto)
-<!-- - [📌 Vista previa del Dashboard](#-vista-previa-del-dashboard) -->
+- [🧪 Desarrollo del Proyecto](#-desarrollo-del-proyecto)<!-- - [📌 Vista previa del Dashboard](#-vista-previa-del-dashboard) -->
 - [💡 Insights claves](#-insights-claves)
 - [🛠️ Tecnologías](#️-tecnologías)
 - [⚙️ Instalación](#️-instalación)
@@ -491,7 +490,7 @@ No existe un patrón fuerte en los ratings que favorezca consistentemente a una 
 
 <!-- ## 📌 Vista previa del Dashboard -->
 
----
+<!-- --- -->
 
 ## 💡 Insights claves
 
