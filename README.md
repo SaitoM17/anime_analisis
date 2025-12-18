@@ -519,6 +519,10 @@ Contrario a la creencia popular, la temporada de estreno no garantiza un mejor r
 
 Corregir el sesgo temporal: Es imperativo ampliar la extracción de la API para los años 2017-2025. La caída drástica en la oferta observada en los gráficos actuales no refleja la realidad del mercado, sino una limitación en la profundidad de la recolección de datos.
 
+**2. Visualización y Comunicación**
+   * Dashboard Interactivo: Considerar la migración de estas gráficas estáticas a una herramienta como Tableau o Streamlit. Esto permitiría a otros usuarios filtrar por su estudio o género favorito y ver los resultados en tiempo real.
+
+   * Limpieza de Etiquetas: Para el reporte final, eliminar géneros que no aportan valor narrativo (como "Award Winning") para centrar el análisis exclusivamente en categorías temáticas (Acción, Romance, Suspense, etc.).
 ---
 
 ## 🛠️ Tecnologías
