@@ -515,6 +515,10 @@ Contrario a la creencia popular, la temporada de estreno no garantiza un mejor r
 
 ## 📈 Recomendaciones
 
+**1. Robustecimiento del Pipeline de Datos (Urgente)**
+
+Corregir el sesgo temporal: Es imperativo ampliar la extracción de la API para los años 2017-2025. La caída drástica en la oferta observada en los gráficos actuales no refleja la realidad del mercado, sino una limitación en la profundidad de la recolección de datos.
+
 ---
 
 ## 🛠️ Tecnologías
