@@ -495,7 +495,9 @@ No existe un patrón fuerte en los ratings que favorezca consistentemente a una 
 
 ## 💡 Insights claves
 
-- [Insight 1]
+**1. El "Efecto de Validación Masiva"**
+   
+   La métrica más determinante para un anime de élite no es solo su calificación, sino su volumen de interacción. Mientras que un anime promedio posee alrededor de 110,000 votos, los títulos sobresalientes ($\geq 8.5$) promedian más de 700,000. Esto indica que la "calidad" en esta industria está estrechamente ligada a la capacidad de una obra para convertirse en un fenómeno de masas y mantener la relevancia entre millones de usuarios.
 - [Insight 2]
 - [Recomendación práctica o estratégica basada en los datos]
 
