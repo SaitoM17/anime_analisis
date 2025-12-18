@@ -15,6 +15,7 @@ El proyecto incluye un pipeline automatizado de extracción y limpieza de datos,
 - [📦 Conjunto de Datos](#-conjunto-de-datos)
 - [🧪 Desarrollo del Proyecto](#-desarrollo-del-proyecto)<!-- - [📌 Vista previa del Dashboard](#-vista-previa-del-dashboard) -->
 - [💡 Insights claves](#-insights-claves)
+- [📈 Recomendaciones](#-recomendaciones)
 - [🛠️ Tecnologías](#️-tecnologías)
 - [⚙️ Instalación](#️-instalación)
 - [👤 Autor](#-autor)
@@ -509,6 +510,10 @@ Existe un ligero beneficio en el rating para las producciones de mayor duración
 **4. Independencia de la Estacionalidad**
 
 Contrario a la creencia popular, la temporada de estreno no garantiza un mejor rating. El análisis de cajas y bigotes demuestra que la mediana de calidad es casi idéntica entre Primavera, Verano, Otoño e Invierno. Los estudios pueden elegir temporadas como Spring por volumen de competencia, pero el éxito crítico depende de la ejecución técnica y narrativa, no del calendario.
+
+---
+
+## 📈 Recomendaciones
 
 ---
 
