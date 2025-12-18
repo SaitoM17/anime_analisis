@@ -496,10 +496,20 @@ No existe un patrón fuerte en los ratings que favorezca consistentemente a una 
 ## 💡 Insights claves
 
 **1. El "Efecto de Validación Masiva"**
-   
-   La métrica más determinante para un anime de élite no es solo su calificación, sino su volumen de interacción. Mientras que un anime promedio posee alrededor de 110,000 votos, los títulos sobresalientes ($\geq 8.5$) promedian más de 700,000. Esto indica que la "calidad" en esta industria está estrechamente ligada a la capacidad de una obra para convertirse en un fenómeno de masas y mantener la relevancia entre millones de usuarios.
-- [Insight 2]
-- [Recomendación práctica o estratégica basada en los datos]
+
+La métrica más determinante para un anime de élite no es solo su calificación, sino su volumen de interacción. Mientras que un anime promedio posee alrededor de 110,000 votos, los títulos sobresalientes ($\geq 8.5$) promedian más de 700,000. Esto indica que la "calidad" en esta industria está estrechamente ligada a la capacidad de una obra para convertirse en un fenómeno de masas y mantener la relevancia entre millones de usuarios.
+
+**2. Estabilidad de la Calidad Base**
+
+A pesar del incremento masivo en la oferta de títulos hasta 2016, el score promedio se ha mantenido notablemente estable por encima de 6.5. Esto sugiere que la industria ha logrado escalar su producción sin sacrificar el estándar de calidad percibido por el consumidor general.
+
+**3. El "Premium" del Formato Largo (Películas y OVAs)**
+
+Existe un ligero beneficio en el rating para las producciones de mayor duración por unidad (60-120 minutos) en comparación con el episodio estándar de 24 minutos. Este insight sugiere que el público premia el mayor valor de producción y presupuesto que suele acompañar a los largometrajes, reflejado en una línea de regresión con tendencia positiva.
+
+**4. Independencia de la Estacionalidad**
+
+Contrario a la creencia popular, la temporada de estreno no garantiza un mejor rating. El análisis de cajas y bigotes demuestra que la mediana de calidad es casi idéntica entre Primavera, Verano, Otoño e Invierno. Los estudios pueden elegir temporadas como Spring por volumen de competencia, pero el éxito crítico depende de la ejecución técnica y narrativa, no del calendario.
 
 ---
 
